@@ -45,8 +45,6 @@
             color: #1e40af;
             font-weight: 500;
         }
-
-        /* ===== SUMMARY BOX ===== */
         .summary-box {
             background: #d9e6f0;
             border-left: 5px solid #2a7faa;
@@ -59,8 +57,6 @@
         .summary-box strong {
             color: #0b2b44;
         }
-
-        /* ===== SEARCH BAR (Baris Atas) ===== */
         .search-bar {
             display: flex;
             flex-wrap: wrap;
@@ -101,8 +97,6 @@
         .search-bar .counter strong {
             color: #0b2b44;
         }
-
-        /* ===== FILTER PANEL (Baris Bawah - Center, Besar, Kontras) ===== */
         .filter-panel {
             background: #f1f5f9;
             border: 2px solid #d0dce6;
@@ -163,8 +157,6 @@
             background: #fecaca;
             border-color: #fca5a5;
         }
-
-        /* ===== WELL CARD ===== */
         .well-card {
             background: #ffffff;
             border-radius: 10px;
@@ -177,8 +169,6 @@
         .well-card.hidden {
             display: none;
         }
-
-        /* ===== WELL HEADER (clickable) ===== */
         .well-header {
             background: #1f4a6b;
             color: #fff;
@@ -234,8 +224,6 @@
             font-size: 11px;
             font-weight: 600;
         }
-
-        /* ===== STATUS BADGE COLORS (3 Status) ===== */
         .status-slickline {
             background: #fef3c7;
             color: #92400e;
@@ -248,8 +236,6 @@
             background: #dbeafe;
             color: #1e40af;
         }
-
-        /* ===== WELL BODY (collapsible) ===== */
         .well-body {
             padding: 16px 22px 20px 22px;
             display: block;
@@ -258,7 +244,6 @@
         .well-body.collapsed {
             display: none;
         }
-
         .objective {
             background: #f7fafc;
             padding: 12px 16px;
@@ -355,8 +340,6 @@
             color: #4b6a7a;
             margin-top: 6px;
         }
-
-        /* ===== NO RESULT ===== */
         .no-result {
             text-align: center;
             padding: 40px 20px;
@@ -370,7 +353,6 @@
         .no-result.show {
             display: block;
         }
-
         @media (max-width: 600px) {
             .well-header {
                 flex-direction: column;
@@ -429,14 +411,14 @@
         <h1>
             📋 Daily Activity Report
             <small>Field Production Engineering · June 2026</small>
-            <span class="update-date">🔄 Updated: June 21, 2026</span>
+            <span class="update-date">🔄 Updated: June 22, 2026</span>
         </h1>
 
         <div class="summary-box">
-            <strong>📌 Summary:</strong> Key updates for June 21: <strong>NEB-80</strong> — Well integrity confirmed good, casing pressure increase attributed to thermal expansion. <strong>Sabar-D8</strong> — Flow to system after velocity string, no liquid at sample point. <strong>Panen Utara-1</strong> — NEW WELL! GLPO installation in progress. <strong>GE-86</strong> — NEW WELL! POP preparation. <strong>GE-39</strong> — NEW WELL! Idle well flowing test to flare planned. <strong>Panen-D5</strong> — Scale removal progressing. <strong>SWB-7</strong> — Generator arrived, found powerpack/cylinder problem.
+            <strong>📌 Summary:</strong> Key updates for June 22: <strong>NEB-80</strong> — SICP increased to 520 psig, bubbles occasionally after rainfall (suspected air trapped). <strong>Panen Utara-1</strong> — 16 spacers installed, unloader and upper pack off set. <strong>GE-86</strong> — BPV pulled out, PX plug retrieved, WHP 400 psi. <strong>GE-39</strong> — 10 jts tubing mobilized, flare pit completed. <strong>Panen-D5</strong> — waiting personnel approval. <strong>SWB-7</strong> — power pack & cylinder moved for repair.
         </div>
 
-        <!-- ===== SEARCH BAR (Baris Atas) ===== -->
+        <!-- ===== SEARCH BAR ===== -->
         <div class="search-bar">
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="🔍 Cari well berdasarkan nama..." oninput="applyFilters()">
@@ -444,7 +426,7 @@
             <div class="counter">Menampilkan <strong id="visibleCount">0</strong> well</div>
         </div>
 
-        <!-- ===== FILTER PANEL (Baris Bawah - Center, Besar, Kontras) ===== -->
+        <!-- ===== FILTER PANEL ===== -->
         <div class="filter-panel">
             <div class="filter-label">🎯 FILTER STATUS</div>
             <div class="filter-buttons">
@@ -472,17 +454,18 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Set Plug prong at X-Nipple prior to secure well. Found bubble in cellar indicating communication between casing and tubing.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 19 – Jun 21</span>
+                    <span>📅 Jun 19 – Jun 22</span>
                     <span>📍 Well Integrity Check &amp; Monitoring</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Jun 19</span><span class="activity-desc">Found bubble inside cellar. Csg 800 psi, Tbg 500 psi. Mobilized slickline, stimulation pump.</span></div>
                     <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc"><span class="highlight">Shut-in 08.15</span> — SITP 600, SICP 800. Bled casing to 300 psi, stable. Tubing/packer integrity confirmed.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Flowing WHP 280 psig.</span> SICP gradually to 440 psig. No gas bubbles. Thermal expansion cause. Well integrity good.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Flowing WHP 280 psig.</span> SICP gradually to 440 psig. No gas bubbles. Thermal expansion cause.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc"><span class="highlight">Flowing WHP 280 psig. SICP gradually to 520 psig.</span> Found bubbles occasionally for 5-10 sec, typically after rainfall — suspected air trapped from soil, no continuous bubbles. No LEL recorded.</span></div>
                 </div>
                 <div class="plan-section">
                     <strong>📌 Plan:</strong>
-                    <ul><li>Continue monitoring casing pressure for 3 days</li><li>Monitor gas bubbles around conductor pipe</li></ul>
+                    <ul><li>Continue monitoring pressure and well integrity verification</li></ul>
                 </div>
             </div>
         </div>
@@ -501,18 +484,18 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Unload well from layer UTAF (6856–6881 ftMD) to determine water loading before SVGL installation.</div>
                 <div class="well-meta">
-                    <span>📅 May 28 – Jun 21</span>
+                    <span>📅 May 28 – Jun 22</span>
                     <span>📍 N₂ Kick-off &amp; Velocity String Installation</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">May 28–Jun 17</span><span class="activity-desc">CTU mobilization, N₂ kick-off, SVGL installation. <span class="highlight">Total installed: 1 ea (2'+5') + 100 ea (10').</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 18</span><span class="activity-desc">Work permit obtained, crew arrived. Cleaned up unit and tools.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 19–20</span><span class="activity-desc">Well testing after velocity string installed. Test to flare, flow to system.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Flow to system — No liquid at sample point.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 18</span><span class="activity-desc">Work permit obtained, crew arrived.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 19–21</span><span class="activity-desc">Well testing after velocity string installed. Test to flare, flow to system.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 20–22</span><span class="activity-desc"><span class="highlight">Flow to system — No liquid at sample point.</span></span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/sabar-d8-test-june19.jpg" alt="Sabar-D8 Test">
-                    <div class="caption">📊 Hasil testing Sabar-D8 — 21 June 2026</div>
+                    <div class="caption">📊 Hasil testing Sabar-D8 — 22 June 2026</div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue flow to system testing</li></ul></div>
             </div>
@@ -532,14 +515,15 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Optimize gas lift by installing GLIS/GLPO assemblies with orifice at ~2600' MD.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 20 – Jun 21</span>
+                    <span>📅 Jun 20 – Jun 22</span>
                     <span>📍 GLPO Installation</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc">Mobilized slickline from Sabar-D8. Tubing clearance to 3070' &amp; 3446' — clear. Fluid level @ 1720 ft.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Installed 7 spacers (2586–2521 ft).</span> Upper tbg stop @ 2511 ft. <span class="highlight">SITHP: 130→170 psi. FL: 1780→1635 ft.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Installed 7 spacers (2586–2521 ft).</span> Upper tbg stop @ 2511 ft. SITHP: 130→170 psi. FL: 1780→1635 ft.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc">SITHP: 270 psi. <span class="highlight">Installed 9 more spacers (8th-16th).</span> Unloader set @ 2423 ft. Upper pack off @ 2406 ft. Upper A tbg stop @ 2403 ft. <span class="highlight">First FL 2180 → Last FL 1870 ft. SITHP: 130 → 270 psi.</span></span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue GLPO installation</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Moving separator to Panen Utara-1</li><li>Conduct well test after GLPO installation</li></ul></div>
             </div>
         </div>
 
@@ -557,17 +541,18 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Conduct MRT &amp; PBUS prior to POP the well.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 21</span>
+                    <span>📅 Jun 21 – Jun 22</span>
                     <span>📍 POP Preparation</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Slickline unit from GE-55. <span class="highlight">Flowline WHU 100%</span>, pressure test 100%, <span class="highlight">hydrotest 80% in progress.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Slickline unit from GE-55. <span class="highlight">Flowline WHU 100%</span>, pressure test 100%, hydrotest 100% </span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc">Made new knot rope socket, pressure test 3000 psi OK. <span class="highlight">Pulled out BPV.</span> RIH 2.35" GC stop at 6530' wlm top PX plug. RIH 2.25" IB tag fluid level @ 5030' wlm. Retrieved Prong PX plug and PX plug body. <span class="highlight">WHP increased to 400 psi.</span></span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/ge-86-test-result.jpg" alt="GE-86 Rig Test">
                     <div class="caption">📊 GE-86 Well Potential During Rig Test</div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue hydrotest flowline</li><li>Install scaffolding, POOH BPV, slickline program</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Close SSD</li><li>RIH Pulling tool to retrieve Prong at XN Nipple</li><li>Pressure Build Up at L-1: 855'-6888' MD &amp; M3B: 6745'-6760' MD &amp; 6779'-6785' MD</li></ul></div>
             </div>
         </div>
 
@@ -585,13 +570,14 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Unload and conduct flowing test to flare pit using temporary line.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 21</span>
+                    <span>📅 Jun 21 – Jun 22</span>
                     <span>📍 Flowing Test to Flare</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Plan to unload and conduct flowing test to flare pit. Coordinated with related departments (similar to GE-52).</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Plan to unload and conduct flowing test to flare pit. Coordinated with related departments.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc"><span class="highlight">10 jts tubing mobilized</span> (1 jt from GE-52 + 9 jt from FPE office Betara). Flare pit completed &amp; brushed. Plan to install tubing as flare line by Drilling Construction team &amp; mobilize test separator V-910 from GE-52. <span class="highlight">Join assessment scheduled June 23</span> to check surface facilities.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Unload well to flare pit</li><li>Conduct flowing test</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Install tubing as flare line</li><li>Mobilize test separator V-910</li><li>Join assessment June 23</li></ul></div>
             </div>
         </div>
 
@@ -609,17 +595,17 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Testing idle well using temporary line prior to deciding WHCP installation.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 7 – Jun 21</span>
+                    <span>📅 Jun 7 – Jun 22</span>
                     <span>📍 Long Duration Well Test</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Jun 7–12</span><span class="activity-desc">Unloaded to flare pit, switched to test separator. WHP trend decreasing.</span></div>
                     <div class="activity-item"><span class="activity-date">Jun 12</span><span class="activity-desc">Assessment: Use WH spool GE-63, tie to GE-62 control box.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 13–21</span><span class="activity-desc">Long duration test continuing. Results updated.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 13–22</span><span class="activity-desc">Long duration test continuing. Results updated.</span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/GE-52-test-june19.jpg" alt="GE-52 Test">
-                    <div class="caption">📊 Hasil long duration test GE-52 — 21 June 2026</div>
+                    <div class="caption">📊 Hasil long duration test GE-52 — 22 June 2026</div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue long duration testing (24 hrs)</li><li>Evaluate WHCP installation feasibility</li></ul></div>
             </div>
@@ -639,15 +625,16 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Scale removal program using CTU and N₂ converter unit.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 17 – Jun 21</span>
+                    <span>📅 Jun 17 – Jun 22</span>
                     <span>📍 Scale Removal (CTU)</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Jun 17–19</span><span class="activity-desc">Mobilized equipment, 80% R/U surface line, CT connector pull test 20k lbs, BOP function test.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc">Nippled up BOP, chemical arrived, <span class="highlight">start mixing brine 240 bbl.</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Mixed brine, filled CT 19 bbl. <span class="highlight">Pressure test CT connector 300-5000 psi OK.</span> BOP test 300-3000 psi OK. Injection Rate test in progress.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc">Nippled up BOP, chemical arrived, start mixing brine 240 bbl.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Mixed brine, filled CT 19 bbl. Pressure test CT connector 300-5000 psi OK. BOP test 300-3000 psi OK. Injection Rate test in progress.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc">Pre-check all equipment, warming up. <span class="highlight">Waiting approval for new personnel</span> (medical, safety induction, work permit training from BGP HSE). Housekeeping.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue Injection Rate test</li><li>If good, continue mixing chemical scale removal</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Nipple Up Injector Head and M/U BHA and nozzle</li><li>Function Test surface line</li><li>N/U Injector and Riser on top BOP</li><li>Pressure test BOP till Stuffing box 300-3000 psi</li><li>Continue job as per program</li></ul></div>
             </div>
         </div>
 
@@ -665,16 +652,17 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Install HPU after well service. Monitor unloading of completion fluid to flare pit.</div>
                 <div class="well-meta">
-                    <span>📅 May 19 – Jun 21</span>
+                    <span>📅 May 19 – Jun 22</span>
                     <span>📍 HPU Installation &amp; Monitoring</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">May 19–31</span><span class="activity-desc">HPU installed &amp; commissioned. Started at 4 SPM, 120 SL.</span></div>
                     <div class="activity-item"><span class="activity-date">Jun 1–17</span><span class="activity-desc">Multiple shutdowns: power pack, N₂ accumulator, genset, pump issues.</span></div>
                     <div class="activity-item"><span class="activity-date">Jun 18–20</span><span class="activity-desc">Waiting for genset and mechanic from Jambi.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Generator arrived, function tested. <span class="highlight">Found powerpack/cylinder problem. Plan to change HPU cylinder.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Generator arrived, function tested. Found powerpack/cylinder problem.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc"><span class="highlight">Moving power pack and cylinder to repair HPU problem.</span> Waiting crane to fix problem and evaluate, then start HPU.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Replace HPU cylinder</li><li>Restart HPU and continue unloading</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Waiting crane to replace/repair power pack &amp; cylinder</li><li>Evaluate and restart HPU</li></ul></div>
             </div>
         </div>
 
@@ -692,12 +680,12 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Identify downhole problem causing no flow. SRP pump replacement planned.</div>
                 <div class="well-meta">
-                    <span>📅 May 14 – Jun 21</span>
+                    <span>📅 May 14 – Jun 22</span>
                     <span>📍 Troubleshooting &amp; Pump Replacement</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">May 14–18</span><span class="activity-desc">Dynagraph test suspected traveling valve leak. S/I due to no flow.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Rig#86 scheduled to move to GE-30 today.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21–22</span><span class="activity-desc">Rig#86 scheduled to move to GE-30 after Panen-D14 well service.</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Replace insert pump via wellservice (Rig#86)</li></ul></div>
             </div>
@@ -865,11 +853,11 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Unload program for low delta P wells.</div>
                 <div class="well-meta">
-                    <span>📅 May 1 – Jun 21</span>
+                    <span>📅 May 1 – Jun 22</span>
                     <span>📍 Unload Program</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">May 1–Jun 21</span><span class="activity-desc">Scheduled unloads ongoing. SB-D13 unload: SITP 200 psig, choke 28/64"P, WHP 500 psig.</span></div>
+                    <div class="activity-item"><span class="activity-date">May 1–Jun 22</span><span class="activity-desc">Scheduled unloads ongoing. SB-D13 unload: SITP 200 psig, choke 28/64"P, WHP 500 psig.</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue unload program per schedule</li></ul></div>
             </div>
@@ -895,13 +883,11 @@
                 <div class="plan-section">
                     <strong>📌 Plan Activities:</strong>
                     <ul>
-                        <li><span class="highlight">NEB-80</span> — Monitoring casing pressure for 3 days</li>
+                        <li><span class="highlight">NEB-80</span> — Continue monitoring pressure &amp; well integrity</li>
                         <li>Panen D5 — CTU scale removal</li>
-                        <li>Panen Utara-1 — GLPO installation</li>
-                        <li>GE-86 — POP preparation</li>
-                        <li>GE-39 — Flowing test to flare</li>
-                        <li>GE-55 <span class="highlight">Done:</span> → GE-65* → NEB GIA → GE-86</li>
-                        <li>Sabar-D8 <span class="highlight">Done:</span> → Panen Utara-1 → Panen-D5 → WB-3/WB-D7</li>
+                        <li>Panen Utara-1 — GLPO installation <span class="highlight">Done:</span>, continue well test, unit move to GE-65</li>
+                        <li>Sabar-D8 <span class="highlight">Done:</span> monitor performance</li>
+                        <li>GE-39 — install Flaring test to flare</li>
                         <li>Program not on hand yet: GE-65</li>
                         <li>On hand program: Panen D5, SB-D8, NEB GIC, SB-1</li>
                     </ul>
@@ -916,7 +902,7 @@
 
         <hr>
         <div class="footer">
-            📄 Daily Activity Report · Field Production Engineering · Updated June 21, 2026
+            📄 Daily Activity Report · Field Production Engineering · Updated June 22, 2026
         </div>
 
     </div>
