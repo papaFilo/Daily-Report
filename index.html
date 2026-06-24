@@ -440,8 +440,8 @@
 
         <!-- ===== WELL CARDS ===== -->
 
-        <!-- GE-65 - NEW WELL (Rigless & Slickline) -->
-        <div class="well-card" data-name="GE-65" data-status="Slickline-ongoing">
+        <!-- GE-65 - NEW WELL (Rigless & Slickline) - MULTI STATUS -->
+        <div class="well-card" data-name="GE-65" data-status="Slickline-ongoing Rigless-ongoing">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ GE-65 <span class="new-well-tag">🆕 NEW</span></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
@@ -832,7 +832,7 @@
                     <img src="image/GE-55 welltest june.jpg" alt="GE-55 Test">
                     <div class="caption">📊 Hasil testing commingle zone GE-55 — June 2026</div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Move to next well: GE-65* (in progress)</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Move to next well: GE-65 (in progress)</li></ul></div>
             </div>
         </div>
 
@@ -973,7 +973,16 @@
                 const status = card.dataset.status || '';
 
                 const matchesSearch = name.includes(query);
-                const matchesFilter = (currentFilter === 'all') || (status === currentFilter);
+
+                // MULTI-STATUS: cek apakah status mengandung filter yang dipilih
+                let matchesFilter = false;
+                if (currentFilter === 'all') {
+                    matchesFilter = true;
+                } else {
+                    // Split status by space and check if any matches
+                    const statuses = status.split(' ');
+                    matchesFilter = statuses.some(s => s === currentFilter);
+                }
 
                 if (matchesSearch && matchesFilter) {
                     card.classList.remove('hidden');
