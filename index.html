@@ -345,32 +345,6 @@
             color: #4b6a7a;
             margin-top: 6px;
         }
-        .jagoo-section {
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-            margin-bottom: 16px;
-            overflow: hidden;
-            border: 1px solid #e2e9f0;
-        }
-        .jagoo-header {
-            background: #1f4a6b;
-            color: #fff;
-            padding: 12px 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px 16px;
-        }
-        .jagoo-header h2 {
-            font-size: 19px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-        }
-        .jagoo-body {
-            padding: 16px 22px 20px 22px;
-        }
         .no-result {
             text-align: center;
             padding: 40px 20px;
@@ -649,7 +623,7 @@
             </div>
         </div>
 
-        <!-- NEB-80 - Monitoring -->
+        <!-- NEB-80 -->
         <div class="well-card" data-name="NEB-80" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ NEB-80</h2>
@@ -673,7 +647,7 @@
             </div>
         </div>
 
-        <!-- Sabar-D8 - Monitoring -->
+        <!-- Sabar-D8 -->
         <div class="well-card" data-name="Sabar-D8" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ Sabar-D8</h2>
@@ -701,7 +675,7 @@
             </div>
         </div>
 
-        <!-- GE-52 - Monitoring -->
+        <!-- GE-52 -->
         <div class="well-card" data-name="GE-52" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ GE-52</h2>
@@ -729,7 +703,7 @@
             </div>
         </div>
 
-        <!-- GE-55 - Monitoring -->
+        <!-- GE-55 -->
         <div class="well-card" data-name="GE-55" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ GE-55</h2>
@@ -757,7 +731,7 @@
             </div>
         </div>
 
-        <!-- GE-30 - Monitoring -->
+        <!-- GE-30 -->
         <div class="well-card" data-name="GE-30" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ GE-30 SRP</h2>
@@ -782,7 +756,7 @@
             </div>
         </div>
 
-        <!-- NEB-GIA - Monitoring -->
+        <!-- NEB-GIA -->
         <div class="well-card" data-name="NEB-GIA" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ NEB-GIA</h2>
@@ -806,7 +780,7 @@
             </div>
         </div>
 
-        <!-- NEB-GIC - Monitoring -->
+        <!-- NEB-GIC -->
         <div class="well-card" data-name="NEB-GIC" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ NEB-GIC</h2>
@@ -830,7 +804,7 @@
             </div>
         </div>
 
-        <!-- SB-D8 - Monitoring -->
+        <!-- SB-D8 -->
         <div class="well-card" data-name="SB-D8" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ SB-D8</h2>
@@ -854,7 +828,7 @@
             </div>
         </div>
 
-        <!-- NEB-112 - Monitoring -->
+        <!-- NEB-112 -->
         <div class="well-card" data-name="NEB-112" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ NEB-112</h2>
@@ -878,7 +852,7 @@
             </div>
         </div>
 
-        <!-- WB-3 - Monitoring -->
+        <!-- WB-3 -->
         <div class="well-card" data-name="WB-3" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ WB-3</h2>
@@ -902,7 +876,7 @@
             </div>
         </div>
 
-        <!-- SB-WB Wells - Monitoring -->
+        <!-- SB-WB Wells -->
         <div class="well-card" data-name="SB-WB Wells" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ SB-WB Wells</h2>
@@ -926,29 +900,28 @@
             </div>
         </div>
 
-        <!-- ===== JAGOO FOLLOW UP SECTION ===== -->
-        <div class="jagoo-section">
-            <div class="jagoo-header">
+        <!-- ===== JAGOO FOLLOW UP (Monitoring Status) ===== -->
+        <div class="well-card" data-name="JAGOO Follow Up" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
                 <h2>📊 JAGOO Follow Up — Choke Optimization</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
             </div>
-            <div class="jagoo-body">
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Choke optimization for WB#6 and WB#2 pads based on JAGOO internal meeting.</div>
+                <div class="well-meta">
+                    <span>📅 Jun 25 – Jun 27</span>
+                    <span>📍 Choke Optimization</span>
+                </div>
                 <div class="activity-timeline">
-                    <div class="activity-item">
-                        <span class="activity-date">WB-6</span>
-                        <span class="activity-desc">Test existing choke: Oil 52 bpd, WC 99.2%. <span class="highlight">Increased choke from 32/64" to 34/64"</span> (Jun 25). Post-increase test: Oil 83 bpd (+31 bpd), WC 98.4%.</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-date">SB-D16</span>
-                        <span class="activity-desc">Test existing choke: Oil 18 bpd, WC 99.4%. <span class="highlight">Increased choke from 48/64"P to 50/64"P</span> (WHP 220→170 psig). Plan to unload SB-D16 then conduct test.</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-date">SB-D9</span>
-                        <span class="activity-desc">Candidate for choke optimization — pending evaluation.</span>
-                    </div>
-                    <div class="activity-item">
-                        <span class="activity-date">SB-D22</span>
-                        <span class="activity-desc">Candidate for choke optimization — pending evaluation.</span>
-                    </div>
+                    <div class="activity-item"><span class="activity-date">WB-6</span><span class="activity-desc">Test existing choke: Oil 52 bpd, WC 99.2%. <span class="highlight">Increased choke from 32/64" to 34/64"</span> (Jun 25). Post-increase test: Oil 83 bpd (+31 bpd), WC 98.4%.</span></div>
+                    <div class="activity-item"><span class="activity-date">SB-D16</span><span class="activity-desc">Test existing choke: Oil 18 bpd, WC 99.4%. <span class="highlight">Increased choke from 48/64"P to 50/64"P</span> (WHP 220→170 psig). Plan to unload SB-D16 then conduct test.</span></div>
+                    <div class="activity-item"><span class="activity-date">SB-D9</span><span class="activity-desc">Candidate for choke optimization — pending evaluation.</span></div>
+                    <div class="activity-item"><span class="activity-date">SB-D22</span><span class="activity-desc">Candidate for choke optimization — pending evaluation.</span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/Choke Optimization (JAGOO SB-WB)" alt="JAGOO Choke Optimization">
