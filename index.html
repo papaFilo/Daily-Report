@@ -224,6 +224,7 @@
             font-size: 11px;
             font-weight: 600;
         }
+        /* ===== STATUS BADGE COLORS ===== */
         .status-slickline {
             background: #fef3c7;
             color: #92400e;
@@ -235,6 +236,10 @@
         .status-monitoring {
             background: #dbeafe;
             color: #1e40af;
+        }
+        .status-after-rig {
+            background: #ccfbf1;
+            color: #0f766e;
         }
         .well-body {
             padding: 16px 22px 20px 22px;
@@ -340,6 +345,32 @@
             color: #4b6a7a;
             margin-top: 6px;
         }
+        .jagoo-section {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            margin-bottom: 16px;
+            overflow: hidden;
+            border: 1px solid #e2e9f0;
+        }
+        .jagoo-header {
+            background: #1f4a6b;
+            color: #fff;
+            padding: 12px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+        }
+        .jagoo-header h2 {
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .jagoo-body {
+            padding: 16px 22px 20px 22px;
+        }
         .no-result {
             text-align: center;
             padding: 40px 20px;
@@ -411,11 +442,11 @@
         <h1>
             📋 Daily Activity Report
             <small>Field Production Engineering · June 2026</small>
-            <span class="update-date">🔄 Updated: June 23, 2026</span>
+            <span class="update-date">🔄 Updated: June 27, 2026</span>
         </h1>
 
         <div class="summary-box">
-            <strong>📌 Summary:</strong> Key updates for June 23: <strong>GE-65</strong> — NEW WELL! Thru tubing perforation, PBU & MRT. Mobilizing equipment, wireline unit arrived. <strong>NEB-80</strong> — Well integrity confirmed good. Bleed off test: SICP 50 psig, SITP 582 psig. Gas bubbles common in swamp area. Monitoring DONE. <strong>Panen Utara-1</strong> — Plan to flow to flare and system test with separator. <strong>GE-86</strong> — SSD closed, PXN plug retrieved. Unload to BGP system. WHP 750 psig. <strong>Panen-D5</strong> — CTU acid soaking at shallow depth. Plan higher concentration acid. <strong>SWB-7</strong> — Cylinder changed, HPU can't start — hydraulic pump problem.
+            <strong>📌 Summary:</strong> Key updates for June 27: <strong>GE-65</strong> — Wireline gun stuck at 6069', waiting shorter gun from Jakarta. Slickline BOP redressed. <strong>GE-86</strong> — MRT completed, PBU in progress until Jun 28. <strong>GE-39</strong> — Unload & test flow to flare completed, long period test ongoing. <strong>Panen-D5</strong> — CTU lay down, plan bullhead clean up with hi-vis. <strong>SWB-7</strong> — Waiting replacement generator. <strong>Panen Utara-1</strong> — GLPO completed, waiting separator test.
         </div>
 
         <!-- ===== SEARCH BAR ===== -->
@@ -434,16 +465,17 @@
                 <button class="filter-btn" data-filter="Slickline-ongoing" onclick="setFilter('Slickline-ongoing')">🟨 Slickline</button>
                 <button class="filter-btn" data-filter="Rigless-ongoing" onclick="setFilter('Rigless-ongoing')">🟪 Rigless</button>
                 <button class="filter-btn" data-filter="Monitoring" onclick="setFilter('Monitoring')">🔵 Monitoring</button>
+                <button class="filter-btn" data-filter="Well After Rig Program" onclick="setFilter('Well After Rig Program')">🟩 After Rig</button>
                 <button class="filter-btn reset-btn" onclick="resetFilters()">✕ Reset Filter</button>
             </div>
         </div>
 
         <!-- ===== WELL CARDS ===== -->
 
-        <!-- GE-65 - NEW WELL (Rigless & Slickline) - MULTI STATUS -->
+        <!-- GE-65 -->
         <div class="well-card" data-name="GE-65" data-status="Slickline-ongoing Rigless-ongoing">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-65 <span class="new-well-tag">🆕 NEW</span></h2>
+                <h2>🛢️ GE-65</h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-slickline">● Slickline-ongoing</span>
@@ -455,13 +487,165 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Thru tubing perforation at M2 (6096-6113 ftMD). PBU & MRT from Commingle M3B (6164-6179 ftMD) & M2 (6096-6113 ftMD).</div>
                 <div class="well-meta">
-                    <span>📅 Jun 23</span>
+                    <span>📅 Jun 23 – Jun 27</span>
                     <span>📍 Thru Tubing Perforation, PBU & MRT</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">Mobilizing to GE-65. Arrived, set up unit, M/U toolstring, pressure test 2000 psi OK. Installed scaffolding. Wireline unit arrived from Jambi. Unloaded PCE using crane.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">Mobilized to GE-65. Set up unit, pressure test OK. Wireline unit arrived.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 24</span><span class="activity-desc"><span class="highlight">Wireline:</span> PCE problem solved. Explosive arrived but rain delayed. <span class="highlight">Slickline:</span> BOP redressed.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 25</span><span class="activity-desc"><span class="highlight">Wireline:</span> Dummy gun tag at 6070', cannot pass. <span class="highlight">Slickline:</span> IB cleared to perforation target.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 26</span><span class="activity-desc">GR-CCL dummy stopped at 6069', cannot pass. Plan to use shorter gun (15 ft) — <span class="highlight">waiting equipment from Jakarta.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 27</span><span class="activity-desc">Waiting for shorter gun from Jakarta. Est. continue Jun 28.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue thru tubing perforation</li><li>Conduct PBU & MRT</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue perforation with shorter gun (est. Jun 28)</li><li>Conduct PBU & MRT</li></ul></div>
+            </div>
+        </div>
+
+        <!-- GE-86 -->
+        <div class="well-card" data-name="GE-86" data-status="Slickline-ongoing">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🛢️ GE-86</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-slickline">● Slickline-ongoing</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Conduct MRT &amp; PBUS prior to POP the well.</div>
+                <div class="well-meta">
+                    <span>📅 Jun 21 – Jun 27</span>
+                    <span>📍 POP Preparation</span>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">Jun 21–23</span><span class="activity-desc">Flowline WHU 100%. Pulled out BPV, retrieved PX & PXN plug. Unload to BGP system. WHP 750 psig.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 24</span><span class="activity-desc">Result test flow to system: 20/64", 24/64" & 28/64".</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 25</span><span class="activity-desc">PBU 4 hrs. Set plug & prong, open SSD. Unload to flare pit. MRT in progress.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 26</span><span class="activity-desc">MRT completed (16, 20 & 24/64"). Shut-in for PBU survey — est. POOH EMR Jun 28.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 27</span><span class="activity-desc">PBU survey in progress. Est. complete Jun 28.</span></div>
+                </div>
+                <div class="well-image">
+                    <img src="image/GE-86 MRT.JPG" alt="GE-86 MRT">
+                    <div class="caption">📊 Hasil MRT GE-86 — June 2026</div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>POOH EMR on Jun 28</li><li>Complete PBU survey</li></ul></div>
+            </div>
+        </div>
+
+        <!-- GE-39 -->
+        <div class="well-card" data-name="GE-39" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🛢️ GE-39</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Unload and conduct flowing test to flare pit using temporary line.</div>
+                <div class="well-meta">
+                    <span>📅 Jun 21 – Jun 27</span>
+                    <span>📍 Flowing Test to Flare</span>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">Jun 21–23</span><span class="activity-desc">10 jts tubing mobilized. Survey completed. Need WHCP, manifold, QC team.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 24</span><span class="activity-desc">Forklift arrived. Flare line installed. Separator arrived but cannot set entrance.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 25</span><span class="activity-desc">Repair pad completed. Separator & temporary line set up.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 26</span><span class="activity-desc">SITP 1480 psig. Unload to flare pit. Test with 18/64" & 28/64" chokes. Results recorded.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 27</span><span class="activity-desc">Plan long period re-test flow to flare pit with choke 28/64".</span></div>
+                </div>
+                <div class="well-image">
+                    <img src="image/GE-39 test.JPG" alt="GE-39 Test">
+                    <div class="caption">📊 Hasil test flow GE-39 — June 2026</div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Long period re-test flow to flare pit with choke 28/64"</li></ul></div>
+            </div>
+        </div>
+
+        <!-- Panen-D5 -->
+        <div class="well-card" data-name="Panen-D5" data-status="Rigless-ongoing">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🛢️ Panen-D5</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-rigless">● Rigless-ongoing</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Scale Removal inside tubing & N2 kick-off at IGUF B3 (3410-3422 ftMD). Change zone & pressure survey IGUF A1 (2724-2738 ftMD).</div>
+                <div class="well-meta">
+                    <span>📅 Jun 17 – Jun 27</span>
+                    <span>📍 Scale Removal &amp; Pressure Survey</span>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">Jun 17–22</span><span class="activity-desc">Mobilized equipment, R/U surface line, pressure tests OK.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">CTU job started. Acid soaking at shallow depth — no significant progress.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 24</span><span class="activity-desc">Acid 7% bullheading. CT tag still at 1.1m. Plan check stripper rubber.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 25</span><span class="activity-desc">Scale trap soaking 5 hrs — still stopped at 1.1m. HCL 7% good solubility.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 26</span><span class="activity-desc">Injectivity test: 0.3-0.5 bpm, pressure 0 psig. Loss 0.9 bpm to formation. <span class="highlight">Plan lay down CTU, inject Hi-vis liquid as barrier for spotting acid (bull heading). Continue by slickline program (from GE-86 after complete).</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 27</span><span class="activity-desc">CTU lay down in progress. Plan bullhead well clean up with inject hi-vis.</span></div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Lay down CTU</li><li>Inject Hi-vis liquid as barrier (bull heading)</li><li>Continue slickline program (from GE-86 after complete)</li></ul></div>
+            </div>
+        </div>
+
+        <!-- Panen Utara-1 -->
+        <div class="well-card" data-name="Panen Utara-1" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🛢️ Panen Utara-1</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Optimize gas lift by installing GLIS/GLPO assemblies with orifice at ~2600' MD.</div>
+                <div class="well-meta">
+                    <span>📅 Jun 20 – Jun 22</span>
+                    <span>📍 GLPO Installation</span>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc">Mobilized slickline from Sabar-D8. Fluid level @ 1720 ft.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Installed 7 spacers (2586–2521 ft).</span> SITHP: 130→170 psi. FL: 1780→1635 ft.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc"><span class="highlight">Installed 9 more spacers (8th-16th).</span> Unloader set @ 2423 ft. Upper pack off @ 2406 ft. SITHP: 130→270 psi. FL: 2180→1870 ft. <span class="highlight">GLPO COMPLETED.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 23–27</span><span class="activity-desc">Waiting separator for well test.</span></div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Well test with separator (waiting)</li></ul></div>
+            </div>
+        </div>
+
+        <!-- SWB-7 -->
+        <div class="well-card" data-name="SWB-7" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🛢️ SWB-7</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="objective"><strong>Objective:</strong> Install HPU after well service. Monitor unloading.</div>
+                <div class="well-meta">
+                    <span>📅 May 19 – Jun 27</span>
+                    <span>📍 HPU Installation &amp; Monitoring</span>
+                </div>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">May 19–31</span><span class="activity-desc">HPU installed &amp; commissioned.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 1–22</span><span class="activity-desc">Multiple shutdowns: power pack, N₂ accumulator, genset, pump issues.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">Cylinder & power pack changed. HPU can't start — hydraulic pump problem.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 24</span><span class="activity-desc">Change solenoid pump. Generator problem.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 25–27</span><span class="activity-desc"><span class="highlight">Waiting replacement generator.</span></span></div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Replace generator</li><li>Restart HPU</li></ul></div>
             </div>
         </div>
 
@@ -477,22 +661,15 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Set Plug prong at X-Nipple prior to secure well. Found bubble in cellar indicating communication between casing and tubing.</div>
+                <div class="objective"><strong>Objective:</strong> Well integrity monitoring after bubble found in cellar.</div>
                 <div class="well-meta">
                     <span>📅 Jun 19 – Jun 23</span>
-                    <span>📍 Well Integrity Check &amp; Monitoring</span>
+                    <span>📍 Well Integrity Check</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 19</span><span class="activity-desc">Found bubble inside cellar. Csg 800 psi, Tbg 500 psi.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc"><span class="highlight">Shut-in 08.15</span> — SITP 600, SICP 800. Tubing/packer integrity confirmed.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc">Flowing WHP 280 psig. SICP gradually to 440 psig. Thermal expansion cause.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc">Flowing WHP 280 psig. SICP gradually to 520 psig. Bubbles after rainfall — suspected air trapped.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc"><span class="highlight">Well integrity CONFIRMED GOOD.</span> WHP 280 psig, SICP stable 520 psig. Shut-in at 11.15: SITP 425 psi, SICP 520 psi. Bled casing to 100 psig. After 3 hrs: SICP 50 psig, SITP 582 psig. <span class="highlight">Gas/air bubbles common in swamp area. Monitoring DONE.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 19–23</span><span class="activity-desc">Well integrity confirmed good. Gas bubbles common in swamp area. <span class="highlight">Monitoring DONE — returned to production.</span></span></div>
                 </div>
-                <div class="plan-section">
-                    <strong>📌 Plan:</strong>
-                    <ul><li>Return to production</li></ul>
-                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Monitor production</li></ul></div>
             </div>
         </div>
 
@@ -508,102 +685,19 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Unload well from layer UTAF (6856–6881 ftMD) to determine water loading before SVGL installation.</div>
+                <div class="objective"><strong>Objective:</strong> Unload well from layer UTAF to determine water loading before SVGL installation.</div>
                 <div class="well-meta">
                     <span>📅 May 28 – Jun 23</span>
-                    <span>📍 N₂ Kick-off &amp; Velocity String Installation</span>
+                    <span>📍 N₂ Kick-off &amp; SVGL Installation</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">May 28–Jun 17</span><span class="activity-desc">CTU mobilization, N₂ kick-off, SVGL installation. <span class="highlight">Total installed: 1 ea (2'+5') + 100 ea (10').</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 18</span><span class="activity-desc">Work permit obtained, crew arrived.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 19–23</span><span class="activity-desc">Well testing after velocity string installed. <span class="highlight">Flow to system — No liquid at sample point.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">May 28–Jun 23</span><span class="activity-desc">SVGL installed. Flow to system — No liquid at sample point. <span class="highlight">Monitoring performance.</span></span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/sabar-d8-test-june19.jpg" alt="Sabar-D8 Test">
-                    <div class="caption">📊 Hasil testing Sabar-D8 — 23 June 2026</div>
+                    <div class="caption">📊 Hasil testing Sabar-D8 — June 2026</div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Monitor performance</li></ul></div>
-            </div>
-        </div>
-
-        <!-- Panen Utara-1 - Slickline-ongoing -->
-        <div class="well-card" data-name="Panen Utara-1" data-status="monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ Panen Utara-1 </h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-slickline">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Optimize gas lift by installing GLIS/GLPO assemblies with orifice at ~2600' MD.</div>
-                <div class="well-meta">
-                    <span>📅 Jun 20 – Jun 23</span>
-                    <span>📍 GLPO Installation</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 20</span><span class="activity-desc">Mobilized slickline from Sabar-D8. Fluid level @ 1720 ft.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21</span><span class="activity-desc"><span class="highlight">Installed 7 spacers (2586–2521 ft).</span> SITHP: 130→170 psi. FL: 1780→1635 ft.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 22</span><span class="activity-desc"><span class="highlight">Installed 9 more spacers (8th-16th).</span> Unloader set @ 2423 ft. Upper pack off @ 2406 ft. SITHP: 130→270 psi. FL: 2180→1870 ft.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc"><span class="highlight">Plan to flow to flare and system test with separator.</span></span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Flow to flare and system test with separator</li></ul></div>
-            </div>
-        </div>
-
-        <!-- GE-86 - Slickline-ongoing -->
-        <div class="well-card" data-name="GE-86" data-status="Slickline-ongoing">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-86 <span class="new-well-tag">🆕 NEW</span></h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-slickline">● Slickline-ongoing</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Conduct MRT &amp; PBUS prior to POP the well.</div>
-                <div class="well-meta">
-                    <span>📅 Jun 21 – Jun 23</span>
-                    <span>📍 POP Preparation</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 21–22</span><span class="activity-desc">Slickline unit from GE-55. Flowline WHU 100%, hydrotest 100%. Pulled out BPV. Retrieved PX plug. WHP 400 psi.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">Cut wire 10', new knot rope socket. <span class="highlight">Closed SSD#1, retrieved PXN plug.</span> Unload to flare pit: WHP/FLP/FLT 750/410/80. Switched to BGP system with choke 20/64A. FGS dummy run completed.</span></div>
-                </div>
-                <div class="well-image">
-                    <img src="image/ge-86-test-result.jpg" alt="GE-86 Rig Test">
-                    <div class="caption">📊 GE-86 Well Potential During Rig Test</div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue MRT & PBUS</li></ul></div>
-            </div>
-        </div>
-
-        <!-- GE-39 - Monitoring -->
-        <div class="well-card" data-name="GE-39" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-39 <span class="new-well-tag">🆕 NEW</span></h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Unload and conduct flowing test to flare pit using temporary line.</div>
-                <div class="well-meta">
-                    <span>📅 Jun 21 – Jun 23</span>
-                    <span>📍 Flowing Test to Flare</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 21–22</span><span class="activity-desc">Plan to unload and conduct flowing test. 10 jts tubing mobilized. Flare pit completed.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc">Survey to location with Project, Production, Instrument team. Need WHCP, manifold, QC team to check flowline. Flare line need to install.</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Need forklift to lift concrete above flare line</li><li>After flare line completed, install separator</li></ul></div>
             </div>
         </div>
 
@@ -621,49 +715,24 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Testing idle well using temporary line prior to deciding WHCP installation.</div>
                 <div class="well-meta">
-                    <span>📅 Jun 7 – Jun 23</span>
+                    <span>📅 Jun 7 – Jun 27</span>
                     <span>📍 Long Duration Well Test</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 7–23</span><span class="activity-desc">Long duration test continuing. Results updated.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 7–27</span><span class="activity-desc">Long duration test continuing. Results updated.</span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/GE-52-test-june19.jpg" alt="GE-52 Test">
-                    <div class="caption">📊 Hasil long duration test GE-52 — 23 June 2026</div>
+                    <div class="caption">📊 Hasil long duration test GE-52 — June 2026</div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue long duration testing (24 hrs)</li><li>Evaluate WHCP installation feasibility</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue long duration testing</li><li>Evaluate WHCP installation feasibility</li></ul></div>
             </div>
         </div>
 
-        <!-- Panen-D5 - Rigless-ongoing -->
-        <div class="well-card" data-name="Panen-D5" data-status="Rigless-ongoing">
+        <!-- GE-55 - Monitoring -->
+        <div class="well-card" data-name="GE-55" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ Panen-D5</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-rigless">● Rigless-ongoing</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Scale removal program using CTU and N₂ converter unit.</div>
-                <div class="well-meta">
-                    <span>📅 Jun 17 – Jun 23</span>
-                    <span>📍 Scale Removal (CTU)</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 17–22</span><span class="activity-desc">Mobilized equipment, R/U surface line, pressure tests OK. Waiting personnel approval.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc"><span class="highlight">CTU job started.</span> N/U injector, function test nozzle. Pressure test BOP 300-3000 psi. Open swab master valve. CT tag at 0.75m. Pump brine — no progress. Pump 1 bbl acid 5% + displace brine 17.5 bbl — soaking. RIH CT tag at 0.9m. Soaking 4 hrs — no significant depth. <span class="highlight">Plan higher concentration acid + scale chelating agent.</span></span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Try high concentration acid + scale chelating agent with same method</li></ul></div>
-            </div>
-        </div>
-
-        <!-- SWB-7 - Monitoring -->
-        <div class="well-card" data-name="SWB-7" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ SWB-7</h2>
+                <h2>🛢️ GE-55</h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-monitoring">● Monitoring</span>
@@ -672,18 +741,19 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Install HPU after well service. Monitor unloading of completion fluid to flare pit.</div>
+                <div class="objective"><strong>Objective:</strong> Conduct PBU and flowing survey from U.1 &amp; U.2 prior to screening acidizing candidates.</div>
                 <div class="well-meta">
-                    <span>📅 May 19 – Jun 23</span>
-                    <span>📍 HPU Installation &amp; Monitoring</span>
+                    <span>📅 Jun 2 – Jun 20</span>
+                    <span>📍 Pressure Survey</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">May 19–31</span><span class="activity-desc">HPU installed &amp; commissioned.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 1–17</span><span class="activity-desc">Multiple shutdowns: power pack, N₂ accumulator, genset issues.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 18–22</span><span class="activity-desc">Generator arrived. Moving power pack &amp; cylinder for repair.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 23</span><span class="activity-desc"><span class="highlight">Cylinder and power pack changed.</span> Tried to start HPU — <span class="highlight">CAN'T START — hydraulic pump problem.</span> Plan change solenoid.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 2–20</span><span class="activity-desc"><span class="highlight">Commingle well completed.</span> EMR data sent to Jakarta. Switched to system.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Change solenoid</li><li>Restart HPU</li></ul></div>
+                <div class="well-image">
+                    <img src="image/GE-55 welltest june.jpg" alt="GE-55 Test">
+                    <div class="caption">📊 Hasil testing commingle zone GE-55 — June 2026</div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Move to GE-65 (in progress)</li></ul></div>
             </div>
         </div>
 
@@ -701,12 +771,12 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Identify downhole problem causing no flow. SRP pump replacement planned.</div>
                 <div class="well-meta">
-                    <span>📅 May 14 – Jun 23</span>
+                    <span>📅 May 14 – Jun 27</span>
                     <span>📍 Troubleshooting &amp; Pump Replacement</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">May 14–18</span><span class="activity-desc">Dynagraph test suspected traveling valve leak. S/I due to no flow.</span></div>
-                    <div class="activity-item"><span class="activity-date">Jun 21–23</span><span class="activity-desc">Waiting Rig#86 to move to GE-30 after Panen-D14.</span></div>
+                    <div class="activity-item"><span class="activity-date">Jun 21–27</span><span class="activity-desc">Waiting Rig#86 to move to GE-30 after Panen-D14.</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Replace insert pump via wellservice (Rig#86)</li></ul></div>
             </div>
@@ -808,34 +878,6 @@
             </div>
         </div>
 
-        <!-- GE-55 - Monitoring -->
-        <div class="well-card" data-name="GE-55" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-55</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Conduct PBU and flowing survey from U.1 &amp; U.2 prior to screening acidizing candidates.</div>
-                <div class="well-meta">
-                    <span>📅 Jun 2 – Jun 20</span>
-                    <span>📍 Pressure Survey</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Jun 2–20</span><span class="activity-desc"><span class="highlight">Commingle well completed.</span> EMR data U.1 &amp; U.2 sent to Jakarta. Switched to system.</span></div>
-                </div>
-                <div class="well-image">
-                    <img src="image/GE-55 welltest june.jpg" alt="GE-55 Test">
-                    <div class="caption">📊 Hasil testing commingle zone GE-55 — June 2026</div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Move to next well: GE-65 (in progress)</li></ul></div>
-            </div>
-        </div>
-
         <!-- WB-3 - Monitoring -->
         <div class="well-card" data-name="WB-3" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
@@ -874,13 +916,51 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Unload program for low delta P wells.</div>
                 <div class="well-meta">
-                    <span>📅 May 1 – Jun 23</span>
+                    <span>📅 May 1 – Jun 27</span>
                     <span>📍 Unload Program</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">May 1–Jun 23</span><span class="activity-desc">Scheduled unloads ongoing.</span></div>
+                    <div class="activity-item"><span class="activity-date">May 1–Jun 27</span><span class="activity-desc">Scheduled unloads ongoing.</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue unload program per schedule</li></ul></div>
+            </div>
+        </div>
+
+        <!-- ===== JAGOO FOLLOW UP SECTION ===== -->
+        <div class="jagoo-section">
+            <div class="jagoo-header">
+                <h2>📊 JAGOO Follow Up — Choke Optimization</h2>
+            </div>
+            <div class="jagoo-body">
+                <div class="activity-timeline">
+                    <div class="activity-item">
+                        <span class="activity-date">WB-6</span>
+                        <span class="activity-desc">Test existing choke: Oil 52 bpd, WC 99.2%. <span class="highlight">Increased choke from 32/64" to 34/64"</span> (Jun 25). Post-increase test: Oil 83 bpd (+31 bpd), WC 98.4%.</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-date">SB-D16</span>
+                        <span class="activity-desc">Test existing choke: Oil 18 bpd, WC 99.4%. <span class="highlight">Increased choke from 48/64"P to 50/64"P</span> (WHP 220→170 psig). Plan to unload SB-D16 then conduct test.</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-date">SB-D9</span>
+                        <span class="activity-desc">Candidate for choke optimization — pending evaluation.</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-date">SB-D22</span>
+                        <span class="activity-desc">Candidate for choke optimization — pending evaluation.</span>
+                    </div>
+                </div>
+                <div class="well-image">
+                    <img src="image/Choke Optimization (JAGOO SB-WB)" alt="JAGOO Choke Optimization">
+                    <div class="caption">📊 Hasil Choke Optimization JAGOO SB-WB — June 2026</div>
+                </div>
+                <div class="plan-section">
+                    <strong>📌 Plan:</strong>
+                    <ul>
+                        <li>Conduct test SB-D16 after unload</li>
+                        <li>Evaluate SB-D9 & SB-D22 for choke optimization</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -904,14 +984,14 @@
                 <div class="plan-section">
                     <strong>📌 Plan Activities:</strong>
                     <ul>
-                        <li><span class="highlight">GE-65</span> — Thru tubing perforation, PBU & MRT</li>
-                        <li>Panen D5 — CTU scale removal</li>
-                        <li>Panen Utara-1 — Well test after GLPO</li>
-                        <li>GE-86 — POP preparation, MRT & PBUS</li>
-                        <li>NEB-80 <span class="highlight">Done:</span> — Return to production</li>
-                        <li>GE-55 <span class="highlight">Done:</span> → GE-65 (in progress)</li>
-                        <li>Sabar-D8 <span class="highlight">Done:</span> — Monitor performance</li>
-                        <li>On hand program: Panen D5, SB-D8, NEB GIC, SB-1</li>
+                        <li>⭐ <span class="highlight">Panen-D14 HPU Rig Program</span> — Facilities from Panen-D8. Need confirmation from Jakarta. Las email only stated no program for Panen-D8 until 2027. Decision needed.</li>
+                        <li>⭐ <span class="highlight">NB-4</span> — Rig program completed. Waiting for gate valve 2-9/16". Need confirmation from Khalid about ETA.</li>
+                        <li><span class="highlight">GE-65</span> — Continue perforation with shorter gun (est. Jun 28)</li>
+                        <li><span class="highlight">GE-86</span> — POOH EMR on Jun 28, complete PBU</li>
+                        <li><span class="highlight">GE-39</span> — Long period re-test flow to flare pit</li>
+                        <li><span class="highlight">Panen-D5</span> — Lay down CTU, inject Hi-vis, continue slickline</li>
+                        <li><span class="highlight">SWB-7</span> — Replace generator, restart HPU</li>
+                        <li><span class="highlight">Panen Utara-1</span> — Well test with separator</li>
                     </ul>
                 </div>
             </div>
@@ -924,7 +1004,7 @@
 
         <hr>
         <div class="footer">
-            📄 Daily Activity Report · Field Production Engineering · Updated June 23, 2026
+            📄 Daily Activity Report · Field Production Engineering · Updated June 27, 2026
         </div>
 
     </div>
@@ -974,12 +1054,10 @@
 
                 const matchesSearch = name.includes(query);
 
-                // MULTI-STATUS: cek apakah status mengandung filter yang dipilih
                 let matchesFilter = false;
                 if (currentFilter === 'all') {
                     matchesFilter = true;
                 } else {
-                    // Split status by space and check if any matches
                     const statuses = status.split(' ');
                     matchesFilter = statuses.some(s => s === currentFilter);
                 }
