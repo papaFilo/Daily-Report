@@ -3,397 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Activity Report - October 2026</title>
+    <title>Daily Activity Report - November 2026</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f0f4f8;
-            padding: 20px;
-            color: #1a2b3c;
+            background: #f0f4f8; padding: 20px; color: #1a2b3c;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1200px; margin: 0 auto; }
         h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0b2b44;
-            border-bottom: 4px solid #2a7faa;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
+            font-size: 28px; font-weight: 700; color: #0b2b44;
+            border-bottom: 4px solid #2a7faa; padding-bottom: 12px;
+            margin-bottom: 20px; display: flex; align-items: center;
+            gap: 12px; flex-wrap: wrap;
         }
-        h1 small {
-            font-size: 16px;
-            font-weight: 400;
-            color: #5a7a8a;
-        }
+        h1 small { font-size: 16px; font-weight: 400; color: #5a7a8a; }
         .update-date {
-            background: #dbeafe;
-            padding: 2px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            color: #1e40af;
-            font-weight: 500;
+            background: #dbeafe; padding: 2px 14px; border-radius: 20px;
+            font-size: 13px; color: #1e40af; font-weight: 500;
         }
         .summary-box {
-            background: #d9e6f0;
-            border-left: 5px solid #2a7faa;
-            padding: 16px 20px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            font-size: 15px;
-            line-height: 1.6;
+            background: #d9e6f0; border-left: 5px solid #2a7faa;
+            padding: 16px 20px; border-radius: 6px; margin-bottom: 20px;
+            font-size: 15px; line-height: 1.6;
         }
-        .summary-box strong {
-            color: #0b2b44;
-        }
+        .summary-box strong { color: #0b2b44; }
+        .summary-box ul { margin: 8px 0 0 20px; }
+        .summary-box li { margin-bottom: 4px; }
         .search-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 20px;
-            align-items: center;
-            background: #ffffff;
-            padding: 12px 20px;
-            border-radius: 10px;
-            border: 1px solid #e2e9f0;
-            margin-bottom: 12px;
+            display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center;
+            background: #ffffff; padding: 12px 20px; border-radius: 10px;
+            border: 1px solid #e2e9f0; margin-bottom: 12px;
             box-shadow: 0 1px 4px rgba(0,0,0,0.04);
         }
-        .search-bar .search-box {
-            flex: 1;
-            min-width: 200px;
-            position: relative;
-        }
+        .search-bar .search-box { flex: 1; min-width: 200px; position: relative; }
         .search-bar .search-box input {
-            width: 100%;
-            padding: 10px 16px 10px 40px;
-            border: 1px solid #d0dce6;
-            border-radius: 8px;
-            font-size: 15px;
+            width: 100%; padding: 10px 16px 10px 40px;
+            border: 1px solid #d0dce6; border-radius: 8px; font-size: 15px;
             background: #f8fafc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%236b7f8f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 14px center;
-            background-size: 18px;
-            transition: border-color 0.2s, background 0.2s;
+            background-size: 18px; transition: border-color 0.2s, background 0.2s;
         }
         .search-bar .search-box input:focus {
-            outline: none;
-            border-color: #2a7faa;
-            background-color: #ffffff;
+            outline: none; border-color: #2a7faa; background-color: #ffffff;
         }
-        .search-bar .counter {
-            font-size: 14px;
-            color: #4b6a7a;
-            white-space: nowrap;
-        }
-        .search-bar .counter strong {
-            color: #0b2b44;
-        }
+        .search-bar .counter { font-size: 14px; color: #4b6a7a; white-space: nowrap; }
+        .search-bar .counter strong { color: #0b2b44; }
         .filter-panel {
-            background: #f1f5f9;
-            border: 2px solid #d0dce6;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-bottom: 22px;
-            text-align: center;
+            background: #f1f5f9; border: 2px solid #d0dce6; border-radius: 12px;
+            padding: 16px 20px; margin-bottom: 22px; text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
         .filter-panel .filter-label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            color: #4b6a7a;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            display: block; font-size: 13px; font-weight: 600; color: #4b6a7a;
+            text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
         }
         .filter-panel .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            align-items: center;
+            display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; align-items: center;
         }
         .filter-btn {
-            padding: 10px 28px;
-            border: 2px solid #d0dce6;
-            border-radius: 30px;
-            background: #ffffff;
-            font-size: 15px;
-            font-weight: 600;
-            color: #4b6a7a;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            padding: 10px 28px; border: 2px solid #d0dce6; border-radius: 30px;
+            background: #ffffff; font-size: 15px; font-weight: 600; color: #4b6a7a;
+            cursor: pointer; transition: all 0.2s ease;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
         .filter-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.10);
             border-color: #b0c4d4;
         }
         .filter-btn.active {
-            background: #1f4a6b;
-            color: #ffffff;
-            border-color: #1f4a6b;
+            background: #1f4a6b; color: #ffffff; border-color: #1f4a6b;
             box-shadow: 0 4px 12px rgba(31, 74, 107, 0.30);
         }
-        .filter-btn.active:hover {
-            transform: translateY(-2px);
-        }
+        .filter-btn.active:hover { transform: translateY(-2px); }
         .filter-btn.reset-btn {
-            background: #fef2f2;
-            border-color: #fecaca;
-            color: #991b1b;
+            background: #fef2f2; border-color: #fecaca; color: #991b1b;
         }
-        .filter-btn.reset-btn:hover {
-            background: #fecaca;
-            border-color: #fca5a5;
-        }
+        .filter-btn.reset-btn:hover { background: #fecaca; border-color: #fca5a5; }
         .well-card {
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-            margin-bottom: 16px;
-            overflow: hidden;
-            border: 1px solid #e2e9f0;
+            background: #ffffff; border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07); margin-bottom: 16px;
+            overflow: hidden; border: 1px solid #e2e9f0;
             transition: opacity 0.25s, transform 0.25s;
         }
-        .well-card.hidden {
-            display: none;
-        }
+        .well-card.hidden { display: none; }
         .well-header {
-            background: #1f4a6b;
-            color: #fff;
-            padding: 12px 22px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px 16px;
-            cursor: pointer;
-            user-select: none;
+            background: #1f4a6b; color: #fff; padding: 12px 22px;
+            display: flex; justify-content: space-between; align-items: center;
+            flex-wrap: wrap; gap: 8px 16px; cursor: pointer; user-select: none;
             transition: background 0.15s;
         }
-        .well-header:hover {
-            background: #1a3f5a;
-        }
+        .well-header:hover { background: #1a3f5a; }
         .well-header h2 {
-            font-size: 19px;
-            font-weight: 600;
-            letter-spacing: 0.3px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 19px; font-weight: 600; letter-spacing: 0.3px;
+            display: flex; align-items: center; gap: 8px;
         }
         .well-header .badge-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            align-items: center;
+            display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
         }
         .well-header .badge {
-            padding: 3px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+            padding: 3px 14px; border-radius: 20px; font-size: 12px;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px;
         }
         .well-header .toggle-icon {
-            font-size: 18px;
-            transition: transform 0.25s;
-            opacity: 0.7;
-            margin-left: 4px;
+            font-size: 18px; transition: transform 0.25s; opacity: 0.7; margin-left: 4px;
         }
-        .well-header .toggle-icon.open {
-            transform: rotate(180deg);
-        }
-        .status-slickline {
-            background: #fef3c7;
-            color: #92400e;
-        }
-        .status-rigless {
-            background: #e0e7ff;
-            color: #3730a3;
-        }
-        .status-monitoring {
-            background: #dbeafe;
-            color: #1e40af;
-        }
+        .well-header .toggle-icon.open { transform: rotate(180deg); }
+        .status-slickline { background: #fef3c7; color: #92400e; }
+        .status-rigless { background: #e0e7ff; color: #3730a3; }
+        .status-monitoring { background: #dbeafe; color: #1e40af; }
         .well-body {
-            padding: 16px 22px 20px 22px;
-            display: block;
-            transition: all 0.3s ease;
+            padding: 16px 22px 20px 22px; display: block; transition: all 0.3s ease;
         }
-        .well-body.collapsed {
-            display: none;
-        }
+        .well-body.collapsed { display: none; }
         .objective {
-            background: #f7fafc;
-            padding: 12px 16px;
-            border-radius: 6px;
-            margin-bottom: 14px;
-            font-size: 14px;
-            border-left: 4px solid #5b9bbd;
+            background: #f7fafc; padding: 12px 16px; border-radius: 6px;
+            margin-bottom: 14px; font-size: 14px; border-left: 4px solid #5b9bbd;
             color: #1a3b4a;
         }
-        .objective strong {
-            color: #0b2b44;
-        }
+        .objective strong { color: #0b2b44; }
+        .objective ul { margin: 6px 0 0 20px; }
         .well-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px 24px;
-            font-size: 13px;
-            color: #4b6a7a;
-            margin-bottom: 10px;
+            display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 13px;
+            color: #4b6a7a; margin-bottom: 10px;
         }
-        .well-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .activity-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
+        .well-meta span { display: flex; align-items: center; gap: 5px; }
+        .activity-timeline { display: flex; flex-direction: column; gap: 4px; }
         .activity-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 5px 0;
-            font-size: 14px;
-            line-height: 1.5;
-            border-bottom: 1px solid #f0f4f8;
+            display: flex; align-items: flex-start; gap: 12px; padding: 5px 0;
+            font-size: 14px; line-height: 1.5; border-bottom: 1px solid #f0f4f8;
         }
-        .activity-item:last-child {
-            border-bottom: none;
-        }
+        .activity-item:last-child { border-bottom: none; }
         .activity-date {
-            font-weight: 600;
-            color: #1f4a6b;
-            min-width: 85px;
-            flex-shrink: 0;
-            font-size: 13px;
-            background: #eaf0f5;
-            padding: 0 10px;
-            border-radius: 4px;
-            text-align: center;
+            font-weight: 600; color: #1f4a6b; min-width: 85px; flex-shrink: 0;
+            font-size: 13px; background: #eaf0f5; padding: 0 10px;
+            border-radius: 4px; text-align: center;
         }
-        .activity-desc {
-            color: #1a2b3c;
-        }
+        .activity-desc { color: #1a2b3c; }
         .highlight {
-            background: #fef3c7;
-            padding: 1px 6px;
-            border-radius: 3px;
-            font-weight: 500;
+            background: #fef3c7; padding: 1px 6px; border-radius: 3px; font-weight: 500;
         }
         .plan-section {
-            background: #eef5f9;
-            padding: 12px 16px;
-            border-radius: 6px;
-            margin-top: 14px;
-            border-left: 4px solid #2a7faa;
+            background: #eef5f9; padding: 12px 16px; border-radius: 6px;
+            margin-top: 14px; border-left: 4px solid #2a7faa;
         }
-        .plan-section strong {
-            color: #0b2b44;
-        }
-        .plan-section ul {
-            margin: 6px 0 0 20px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+        .plan-section strong { color: #0b2b44; }
+        .plan-section ul { margin: 6px 0 0 20px; font-size: 14px; line-height: 1.6; }
         .well-image {
-            margin: 14px 0;
-            background: #f8fafc;
-            padding: 14px;
-            border-radius: 8px;
-            border: 1px solid #e2e9f0;
-            text-align: center;
+            margin: 14px 0; background: #f8fafc; padding: 14px;
+            border-radius: 8px; border: 1px solid #e2e9f0; text-align: center;
         }
         .well-image img {
-            max-width: 100%;
-            max-height: 400px;
-            border-radius: 6px;
+            max-width: 100%; max-height: 400px; border-radius: 6px;
             border: 1px solid #d0dce6;
         }
         .well-image .caption {
-            font-size: 13px;
-            color: #4b6a7a;
-            margin-top: 6px;
+            font-size: 13px; color: #4b6a7a; margin-top: 6px;
         }
         .no-result {
-            text-align: center;
-            padding: 40px 20px;
-            color: #4b6a7a;
-            font-size: 16px;
-            background: #ffffff;
-            border-radius: 10px;
-            border: 1px dashed #d0dce6;
-            display: none;
+            text-align: center; padding: 40px 20px; color: #4b6a7a;
+            font-size: 16px; background: #ffffff; border-radius: 10px;
+            border: 1px dashed #d0dce6; display: none;
         }
-        .no-result.show {
-            display: block;
-        }
+        .no-result.show { display: block; }
         @media (max-width: 600px) {
-            .well-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .well-header .badge-group {
-                width: 100%;
-            }
-            .activity-item {
-                flex-wrap: wrap;
-                gap: 4px 8px;
-            }
-            .activity-date {
-                min-width: 65px;
-                font-size: 12px;
-            }
-            h1 {
-                font-size: 22px;
-            }
-            .search-bar {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .search-bar .counter {
-                text-align: center;
-            }
-            .filter-panel .filter-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .filter-btn {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-            .well-header .toggle-icon {
-                align-self: flex-end;
-            }
+            .well-header { flex-direction: column; align-items: flex-start; }
+            .well-header .badge-group { width: 100%; }
+            .activity-item { flex-wrap: wrap; gap: 4px 8px; }
+            .activity-date { min-width: 65px; font-size: 12px; }
+            h1 { font-size: 22px; }
+            .search-bar { flex-direction: column; align-items: stretch; }
+            .search-bar .counter { text-align: center; }
+            .filter-panel .filter-buttons { flex-direction: column; align-items: center; }
+            .filter-btn { width: 100%; max-width: 280px; text-align: center; }
+            .well-header .toggle-icon { align-self: flex-end; }
         }
-        hr {
-            border: none;
-            border-top: 2px dashed #d0dce6;
-            margin: 16px 0 8px 0;
-        }
+        hr { border: none; border-top: 2px dashed #d0dce6; margin: 16px 0 8px 0; }
         .footer {
-            text-align: center;
-            font-size: 13px;
-            color: #5a7a8a;
-            padding: 16px 0 4px 0;
+            text-align: center; font-size: 13px; color: #5a7a8a; padding: 16px 0 4px 0;
         }
     </style>
 </head>
@@ -402,12 +188,19 @@
 
         <h1>
             📋 Daily Activity Report
-            <small>Field Production Engineering · October 2026</small>
-            <span class="update-date">🔄 Updated: October 10, 2026</span>
+            <small>Field Production Engineering · November 2026</small>
+            <span class="update-date">🔄 Updated: November 07, 2026</span>
         </h1>
 
         <div class="summary-box">
-            <strong>📌 Summary:</strong> Key updates for October 10: <strong>GE-24 ESP</strong> — ESP started, switched to system. Test gain 43 BOPD vs previous. <strong>WB-D6</strong> — Found bubble at cellar box. Upper casing valve replaced. Bubble still appears. Plan: pressure test & top job cement. <strong>NEB-48</strong> — Opened upper SSD, unloaded to flare pit, FBHP 6 hrs done. In progress SBHP 6 hrs. <strong>GE-80</strong> — Well no flow (WHP=FLP=460 psig). Plan: build up SITP & re-unload. <strong>GE-73</strong> — STAGE 1 pickle & STAGE 2 BASR Trap fluid injection. <strong>NEB-18</strong> — Choke increased 20/64"A → 28/64"A.
+            <strong>📌 Summary — November 07, 2026:</strong>
+            <ul>
+                <li><strong>NEB-124 (new well)</strong> — Prong &amp; body plug pulled (SITP 600→740 psig). Switch to system on <strong>24/64"</strong> (WHP/FLP 780/430 psig). Line up test — Gas 3,970 MCFD.</li>
+                <li><strong>WB-D6</strong> — SGS survey &amp; SBHP 10 min done. SITP <strong>1,160 psig</strong>. Plan CTU.</li>
+                <li><strong>SB-D17</strong> — N2 kickoff done; switch to system (WHP/FLP 170/160 psig). Plan test.</li>
+                <li><strong>Panen-D14 HPU</strong> — Test tank on site. Plan test.</li>
+                <li><strong>GE-69</strong> — Divert line to GE GRF. HAZOP done, material collection ongoing.</li>
+            </ul>
         </div>
 
         <!-- ===== SEARCH BAR ===== -->
@@ -432,10 +225,10 @@
 
         <!-- ===== WELL CARDS ===== -->
 
-        <!-- NEB-48 - Slickline-ongoing -->
-        <div class="well-card" data-name="NEB-48" data-status="Slickline-ongoing">
+        <!-- NEB-124 -->
+        <div class="well-card" data-name="NEB-124" data-status="Slickline-ongoing">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ NEB-48</h2>
+                <h2>🛢️ NEB-124 <small style="font-size:13px;font-weight:400;opacity:.8;">(New Well)</small></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-slickline">● Slickline-ongoing</span>
@@ -444,29 +237,39 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Change zone by open upper zone to be comingle and conduct FBHP & SBHP survey commingle zone. Well status: intermittent well to BGP.</div>
+                <div class="objective">
+                    <strong>Objective:</strong>
+                    <ul>
+                        <li>MRT chk 24, 28, 32 &amp; PBU 24 hrs — <strong>Lower Zone WG 6793'–6834'MD</strong> (potency choke 48/64", 2.5 MMCFD, no liquid, CO₂ 23%).</li>
+                        <li>MRT chk 24, 28, 32 &amp; PBU 48 hrs — <strong>Middle Zone LTAF C 6726'–6750'MD</strong> (potency choke 48/64", 3.5 MMCFD, 65 BCPD, 36% WC, CO₂ 50%).</li>
+                    </ul>
+                </div>
                 <div class="well-meta">
-                    <span>📅 Oct 7 – Oct 10</span>
-                    <span>📍 Pressure Survey</span>
+                    <span>📅 Nov 05 – Nov 07</span>
+                    <span>📍 MRT &amp; PBU — Lower Zone WG</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 7</span><span class="activity-desc">Moved slickline unit to location. Continue preparation while waiting official program.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 8</span><span class="activity-desc">RIH 2.35" GC — stop at X-Nipple at 6453'WLM/6466'MD. RIH 2.25" GC — stop at XN-Nipple at 6632'WLM/6649'MD.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9</span><span class="activity-desc">RIH BO shifting tool to open SSD upper at 6532'WLM/6515'MD. Jarred down several times — <span class="highlight">success, SITP build up from 600 to 750 psig.</span> BOL well with choke 20/64"A (WHP 560, FLP 430, FLT 100°F).</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc">Line up test. RIH EMR — FBHP 3 hrs (EMR hang at 6515'MD) & FBHP 3 hrs (EMR hang at 6565'MD) completed. <span class="highlight">Latest: Choke 20/64"A, WHP 530, Gas 996 MCFD, Condensate 28 BCPD.</span> In progress shut in for SBHP 6 hrs.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 05</span><span class="activity-desc">PCE pressure test 3000 psig + SIMOP. Slickline &amp; crane set Nov 6; separator V-140 to NEB#6 pad Nov 7.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 06</span><span class="activity-desc">Hydrotest &amp; flushing flowline done. Choke, SDV, instrument, scaffolding installed. <span class="highlight">BPV pulled — SITP 600 psig.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Unit, V-140 &amp; crane set. Tubing clearance done. <span class="highlight">Prong pulled — SITP 600→740 psig.</span> Body plug POOH. Unload to flare pit; <span class="highlight">switch to system 24/64" (WHP/FLP 780/430 psig).</span> Line up test V-140.</span></div>
                 </div>
                 <div class="well-image">
-                    <img src="image/NEB-48-1.png" alt="NEB-48 Test">
-                    <div class="caption">📊 Hasil testing NEB-48 — October 2026</div>
+                    <img src="image/NEB-124.png" alt="NEB-124 Test">
+                    <div class="caption">📊 Hasil testing NEB-124 — Lower Zone WG (Nov 07, 2026)</div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>POOH EMR, BOL & conduct test</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong>
+                    <ul>
+                        <li>RIH dummy &amp; EMR, MRT choke 24/28/32/64"</li>
+                        <li>PBU 24 hrs — est. change zone to middle zone 10 Nov 07.00</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- WB-D6 - Slickline-ongoing -->
+        <!-- WB-D6 -->
         <div class="well-card" data-name="WB-D6" data-status="Slickline-ongoing">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ WB-D6</h2>
+                <h2>🛢️ WB-D6 <small style="font-size:13px;font-weight:400;opacity:.8;">(Swab Job prior BOL)</small></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-slickline">● Slickline-ongoing</span>
@@ -475,53 +278,28 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Found bubble at cellar box. Well integrity check & secure well.</div>
+                <div class="objective"><strong>Objective:</strong> Swab job prior BOL.</div>
                 <div class="well-meta">
-                    <span>📅 Sep 30 – Oct 10</span>
-                    <span>📍 Well Integrity Check</span>
+                    <span>📅 Nov 05 – Nov 07</span>
+                    <span>📍 Swab Job &amp; SGS Survey</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Sep 30–Oct 1</span><span class="activity-desc">PJSM & observed well. WHP 200 psi. Installed upper annulus gauge (0 psi) & lower annulus gauge (180 psi). <span class="highlight">Suspect stuck close upper annulus valve & leaking 7" dummy hanger seal.</span> Cavity test on SOL, 9" seal tubing hanger & THA — holding OK.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 2–3</span><span class="activity-desc">Mobilized slickline unit from NG-35. Pressure test PCE 3000 psi. R/U lubricator & shut in well. RIH 2.35" GC — tag X-Nipple at 3936'WLM/3947'MD. RIH 2.25" GC — tag XN-Nipple at 4840'WLM/4853'MD. BOL to system.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 4–6</span><span class="activity-desc">RIH EMR to 4840'WLM — flowing gradient survey. <span class="highlight">Set PXN plug & prong at X-Nipple (4853'MD/4840'WLM).</span> Bleed off tubing pressure to flare pit. Replaced upper casing valve by wellhead specialist.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 7–8</span><span class="activity-desc">Fill up tubing 10 bbls formation water, pressurize to 880 psi. Pull out dummy valve at GLM#2 — <span class="highlight">success.</span> Bleed off pressure. Replace upper casing valve stuck with new one — completed. Install pressure gauge.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9–10</span><span class="activity-desc">Install Pressure gauge upper casing valve. <span class="highlight">Pressurize from gas lift line to 500 psi (holding 15 min), increase to 800 psi (holding 15 min), release to zero.</span> Found no integrity issue. Bubble significant decrease during pressurize to 800 psi. Plan clean up cellar box, ensure leaking point on annulus, conduct top job cement.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 05</span><span class="activity-desc">Unit moved. SITP 150→0 psig. Swab 3× — recover <span class="highlight">5 bbls</span>.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 06</span><span class="activity-desc">Swab 6× — recover <span class="highlight">7.7 bbls</span> (cum 12.7 bbls). SGS survey per MOC Jakarta.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Tubing clear. EMR SGS survey &amp; SBHP 10 min done. <span class="highlight">SITP 1,160 psig.</span> Plan CTU — waiting program.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Clean up cellar box</li><li>Ensure leaking point on annulus casing</li><li>Conduct top job cement</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong>
+                    <ul>
+                        <li>Arrange CTU — waiting program</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- GE-73 - Rigless-ongoing -->
-        <div class="well-card" data-name="GE-73" data-status="Rigless-ongoing">
+        <!-- SB-D17 -->
+        <div class="well-card" data-name="SB-D17" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-73</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-rigless">● Rigless-ongoing</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> CTU Program — STAGE 1 Pickle Fluid & STAGE 2 BASR Trap Fluid injection.</div>
-                <div class="well-meta">
-                    <span>📅 Oct 2 – Oct 10</span>
-                    <span>📍 CTU Program</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 2–5</span><span class="activity-desc">Mobilization CTU equipment from GE-80 to GE-73. Warming up CT unit. Cut CT pipe 30 ft. M/U CT connector, pull test 19K lbs. R/U high pressure treating iron. Mobilized acid tank #1, #2 & container tool.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 6–8</span><span class="activity-desc">Filled up fuel all unit. Mobilized chemical from Betara BDSI yard. Mixing brine 8.6 ppg. Fill up brine to CT 21 bbls. Pressure test line & BOP completed. Install scaffolding.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9</span><span class="activity-desc">Function test nozzle at surface. Nipple up injector & pressure test up to 3000 psig — completed. Started pre-injectivity test: RIH CT to 6756 ft, pump until wellbore return 88 bbls. <span class="highlight">Injectivity Rate test: 0.5 bpm-558 psig, 0.7 bpm-3275 psig, 0.9 bpm-4400 psig, 1.1 bpm-4916 psig (total IRT 6.5 bbls).</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc">Nipple up injector & pressure test injector & BOP to 3000 psig. <span class="highlight">STAGE 1 injection pickle fluid & STAGE 2 BASR Trap fluid:</span> RIH CT to 6756 ft while inject brine 14.3 bbls. Pump pickling fluid 10 bbls & brine 5 bbls at 1 bpm (CP 1739 psig). Pump Soda ash 8 bbls, displace with brine 70 bbls (pH 6). Pump BASR trap 10 bbl, displace 11 bbls brine (CP 2025 psig). Close wing valve & perform injectivity rate test: 0.5 bpm-CP 1340 psig, 0.7 bpm-CP 3280 psig, 0.9 bpm-CP 4400 psig, 1.1 bpm-CP 4570 psig. POOH CT to surface.</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue program STAGE-2 BASR Trap fluid & soaking</li></ul></div>
-            </div>
-        </div>
-
-        <!-- GE-24 ESP - Monitoring -->
-        <div class="well-card" data-name="GE-24 ESP" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-24 ESP</h2>
+                <h2>🛢️ SB-D17 <small style="font-size:13px;font-weight:400;opacity:.8;">(CTU Kickoff N2)</small></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-monitoring">● Monitoring</span>
@@ -530,238 +308,32 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Start Up ESP after Wellservice.</div>
+                <div class="objective"><strong>Objective:</strong> CTU N2 kickoff unloading; pressure survey prior PBOL (UTAF 5596–5608'MD &amp; UTAF-1 5646–5660'MD).</div>
                 <div class="well-meta">
-                    <span>📅 Oct 4 – Oct 10</span>
-                    <span>📍 ESP Start Up</span>
+                    <span>📅 Oct 30 – Nov 07</span>
+                    <span>📍 CTU N2 Kickoff &amp; Pressure Survey</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 4</span><span class="activity-desc">Started commissioning GE-24 ESP at 14.00 with freq. 45 Hz. Estimate rate 1,632 BLPD. <span class="highlight">Last chloride 2,700 & pH 5.</span> Still flowing to rig tank. Jumper line to GE-5 (shut in well) already connected.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 5</span><span class="activity-desc">Liquid properties: WC 95.3-97.3%, chloride 9,500 ppm, pH 7. <span class="highlight">Switched well to system at 11.45 through GE-5 flowline.</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 6–8</span><span class="activity-desc">Continue monitoring ESP performance. Water cut monitoring: 87.5% (Oct 7), 89.9% (Oct 8). Rig moving out completed, separator V-114 moved. Re-install permanent wellhead spool in progress.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9–10</span><span class="activity-desc">Water cut: 79.8% (Oct 9). Installation wellhead spool completed. At 16.00 switch flow thru permanent line to system. <span class="highlight">Test result: Liquid 1,271 BFPD, Oil 89 BPD, Gas 105 MCFD, Water 1,180 BWPD, WC 93.0%, Gain 43 BOPD vs previous test.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 30–Nov 01</span><span class="activity-desc">CTU &amp; slickline mobilized, unit set up.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 02–03</span><span class="activity-desc">MOC SGS survey obtained. EMR run — completed.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 04</span><span class="activity-desc">N2 kickoff: CT RIH 1306/3400/5279 ft, pump N2, return N2 only WHP 14.5 psi. (N2 used 955 gal)</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 05</span><span class="activity-desc">N2 kickoff cont. Choke reduce 64→32→16/64", no liquid. Shut in. (N2 used 965 gal)</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 06</span><span class="activity-desc">N2 kickoff cont. SITP 230 psig bleed off. Build up 15 min → 25 psig. (N2 used 727 gal)</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Unload to flare pit. <span class="highlight">Switch to system — WHP/FLP 170/160 psig.</span> Rig down CTU.</span></div>
                 </div>
-                <div class="well-image">
-                    <img src="image/GE-24.png" alt="GE-24 Test">
-                    <div class="caption">📊 Hasil testing GE-24 ESP — October 2026</div>
+                <div class="plan-section"><strong>📌 Plan:</strong>
+                    <ul>
+                        <li>Rig down complete CTU</li>
+                        <li>Conduct test</li>
+                    </ul>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue monitor by conducted test</li></ul></div>
             </div>
         </div>
 
-        <!-- GE-80 - Monitoring -->
-        <div class="well-card" data-name="GE-80" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ GE-80</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> CTU Matrix Acidizing.</div>
-                <div class="well-meta">
-                    <span>📅 Sep 2 – Oct 10</span>
-                    <span>📍 CTU Matrix Acidizing</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Sep 2–15</span><span class="activity-desc">Preparation CTU. Cut coil 40 ft. Mixing brine 210 Bbl. Pull test CT connector 20,000 lbs. N2 arrived at location. Mixing brine for job.</span></div>
-                    <div class="activity-item"><span class="activity-date">Sep 16–22</span><span class="activity-desc">M/U BHA & nozzle. RIH CT to 7,194 ft. Injection rate test. Mixing pickle, acidizing treatment (SAS LH-1 90 bbls). Post injectivity.</span></div>
-                    <div class="activity-item"><span class="activity-date">Sep 23–29</span><span class="activity-desc">N2 kick off — multiple runs. Total N2 pumped: 962–1,166 gallons. Stock LN2: 3,038 gal. Well flowing naturally then shut in.</span></div>
-                    <div class="activity-item"><span class="activity-date">Sep 30–Oct 9</span><span class="activity-desc">Unload well naturally to flare pit. Multiple attempts. Liquid sample: WC 93.9–98.4%, Cl 11,000–13,500 ppm, pH 4.5–7. Oct 9: <span class="highlight">BOL well to BGP with choke 16/64" (WHP 530, FLP 430, FLT 92°F).</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc"><span class="highlight">Found well no flow (WHP/FLP 460/460 psig — balance).</span> Plan to build up SITP and re-unload prior BOL.</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Build up SITP</li><li>Re-unload prior BOL</li></ul></div>
-            </div>
-        </div>
-
-        <!-- NEB-18 - Monitoring -->
-        <div class="well-card" data-name="NEB-18" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>📊 NEB-18</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Optimized Gas Feed to GRF — Choke Optimization.</div>
-                <div class="well-meta">
-                    <span>📅 Oct 5 – Oct 10</span>
-                    <span>📍 Choke Optimization</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 5–7</span><span class="activity-desc">Conducted updated test & increased choke GE-1. <span class="highlight">Only NEB-18 recommended.</span> Schedule update well test & increase choke per 4/64". NEB-14, NEB-40 in no load up region. NEB-58 in minimum critical.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 8</span><span class="activity-desc">Increased choke NEB-18 from 20/64"A to 24/64"A. Conducted test. Plan propose increase to 28/64"A.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9</span><span class="activity-desc">Increased choke NEB-18 from 24/64"A to 28/64"A. Gas is similar while WHP dropped 15 psig. As per discussion with Jakarta — <span class="highlight">keep choke NEB-18 at this size and plan retest.</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc">Re-conduct test NEB-18. <span class="highlight">Latest: Choke 28/64", WHP 350, FLP 150, FLT 108, Oil 1 BCPD, Gas 1,031 MCFD, GOR 1,031,000, API 61.1, CO2 14.98%.</span></span></div>
-                </div>
-                <div class="well-image">
-                    <img src="image/NEB-18.png" alt="NEB-18 Test">
-                    <div class="caption">📊 Hasil testing NEB-18 — October 2026</div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue monitor at choke 28/64"</li></ul></div>
-            </div>
-        </div>
-
-        <!-- Panen-D11ST - Monitoring -->
-        <div class="well-card" data-name="Panen-D11ST" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ Panen-D11ST</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Optimization program — replace with adjustable choke, test, rocking well to flare pit, assess choke adjustment.</div>
-                <div class="well-meta">
-                    <span>📅 Oct 10</span>
-                    <span>📍 Optimization Program</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc">In coordination to prepare & install barton chart for reading WHP at Panen-D11ST & Panen-D15 (Panen-D7 already installed). Plan to move separator & replace choke from positive to adjustable.</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Move separator & replace choke to adjustable</li><li>Rocking well to flare pit with 64/64"</li><li>Test after rocking</li></ul></div>
-            </div>
-        </div>
-
-        <!-- Panen-D4 HPU - Monitoring -->
-        <div class="well-card" data-name="Panen-D4 HPU" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ Panen-D4 HPU</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> No flow — troubleshoot.</div>
-                <div class="well-meta">
-                    <span>📅 Sep 29 – Oct 10</span>
-                    <span>📍 No Flow Troubleshoot</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Sep 29–30</span><span class="activity-desc">Found well no flow. Sonolog liquid level low. Reduce SPM from 4 to 3. Found liquid at sample point but no flow at production tank.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9</span><span class="activity-desc">Shut in well & conduct sonolog — liquid level cannot be recorded. Plan re-conduct static sonolog.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 10</span><span class="activity-desc">Conduct static fluid level — pump submerge 2,590-2,829 ft. BOL after shut in 24 hrs — still no liquid flow. <span class="highlight">Discussion: Last dynagraph full pump, valve test good, build up test no pressure, still no flow. Plan: fill up tubing with formation water to decide wax deposit vs tubing leak (Oct 12).</span></span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Fill up tubing with formation water (Oct 12)</li><li>Decide wax deposit or tubing leak</li><li>If wax → propose stimulation wax removal</li></ul></div>
-            </div>
-        </div>
-
-        <!-- NB-12 HPU - Monitoring -->
-        <div class="well-card" data-name="NB-12 HPU" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ NB-12 HPU</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Gas interference — SPM optimization.</div>
-                <div class="well-meta">
-                    <span>📅 Sep 26 – Oct 3</span>
-                    <span>📍 SPM Optimization</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Sep 26</span><span class="activity-desc">According to dynagraph, pump experiencing gas interference. Reduced SPM from 4.5 to 4. Conducted sonolog each SPM: <span class="highlight">SPM 4.5 — liquid level 2,983 ft, pump submergence 1,732 ft. SPM 4 — liquid level 2,893 ft, pump submergence 1,822 ft.</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Sep 27–Oct 3</span><span class="activity-desc">Continue monitor well performance. Multiple test results recorded (BFPD 44–66, BOPD 0–7, WC 0–3.6%).</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Re-conduct sonolog</li></ul></div>
-            </div>
-        </div>
-
-        <!-- NB-9 HPU - Monitoring -->
-        <div class="well-card" data-name="NB-9 HPU" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ NB-9 HPU</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> Stroke length optimization.</div>
-                <div class="well-meta">
-                    <span>📅 Oct 4 – Oct 5</span>
-                    <span>📍 Stroke Length Optimization</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 4–5</span><span class="activity-desc">Increase stroke length from 120" to 130". Conducted test: <span class="highlight">Sep 29 (SL 120) — BFPD 410, BOPD 42, BWPD 381, WC 77.8%. Oct 4 (SL 130) — BFPD 410, BOPD 82, BWPD 278, WC 74.9%. Oct 5 (SL 130) — BFPD 410, BOPD 22, BWPD 378, WC 78.4%.</span></span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue monitor</li></ul></div>
-            </div>
-        </div>
-
-        <!-- NB-11 HPU - Monitoring -->
-        <div class="well-card" data-name="NB-11 HPU" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ NB-11 HPU</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> SPM adjustment — existing test.</div>
-                <div class="well-meta">
-                    <span>📅 Oct 7 – Oct 10</span>
-                    <span>📍 SPM Adjustment</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 7–10</span><span class="activity-desc">Conduct existing test prior SPM adjustment. <span class="highlight">Oct 7 (SL 130, SPM 5) — BFPD 848, BOPD 31, WC 0.9%. Oct 8 — liquid level 5,195.87 ft. Oct 9–10 — CBR condition.</span></span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Re-conduct sonolog, dynagraph & test</li></ul></div>
-            </div>
-        </div>
-
-        <!-- NB-6 HPU - Monitoring -->
-        <div class="well-card" data-name="NB-6 HPU" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ NB-6 HPU</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> HPU Commissioning after Well Service.</div>
-                <div class="well-meta">
-                    <span>📅 Sep 26 – Oct 10</span>
-                    <span>📍 HPU Commissioning</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Sep 26–Oct 2</span><span class="activity-desc">Joint assessment with Prod. Ops, PE Jakarta, Drilling safety, & Unisat for HPU layout. <span class="highlight">Decided to place HPU power pack 5 meters away from cellar box (API regulation).</span> Plan mobilize genset & fuel tank.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 3–5</span><span class="activity-desc">Mobilized genset & fuel tank, set up. Connected cable. Filled up diesel 3,000 liters. Production Ops flushing 3" underground flow line NB-6.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 6–8</span><span class="activity-desc">Commissioning HPU (SPM 3.5, SL 120") — flowing to flare pit. Found stuck after 5.5 hrs. Well back on stream after troubleshoot. Still 100% WC.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9–10</span><span class="activity-desc">Continue unload to flare pit (100% WC). <span class="highlight">Found problem on genset filter fuel broken.</span> Spare part coming, replace, run generator — unsuccessful. Continue troubleshoot, waiting spare part.</span></div>
-                </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Continue troubleshoot generator after spare part on site</li></ul></div>
-            </div>
-        </div>
-
-        <!-- Panen-D14 HPU - Monitoring -->
+        <!-- Panen-D14 HPU -->
         <div class="well-card" data-name="Panen-D14 HPU" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>🛢️ Panen-D14 HPU</h2>
+                <h2>🛢️ Panen-D14 HPU <small style="font-size:13px;font-weight:400;opacity:.8;">(After Well Service)</small></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-monitoring">● Monitoring</span>
@@ -770,25 +342,34 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="objective"><strong>Objective:</strong> HPU Commissioning after Well Service.</div>
+                <div class="objective"><strong>Objective:</strong> HPU commissioning after well service.</div>
                 <div class="well-meta">
-                    <span>📅 Oct 1 – Oct 10</span>
+                    <span>📅 Oct 01 – Nov 07</span>
                     <span>📍 HPU Commissioning</span>
                 </div>
                 <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Oct 1</span><span class="activity-desc">Coordination meeting with PE Jakarta, Drilling Safety, & HPU contractor (PT Unisat). <span class="highlight">Decided to place HPU power pack 5 meters away from cellar box (API regulation).</span></span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 3</span><span class="activity-desc">Re-checked HPU condition & warming up for commissioning.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 7–8</span><span class="activity-desc">Reposition power pack as per API 5 meters from control box. Running test HPU — OK.</span></div>
-                    <div class="activity-item"><span class="activity-date">Oct 9–10</span><span class="activity-desc">As per discussion, plan re-assessment with field team (Prod ops, HSE, mechanic etc) prior commissioning. Plan commissioning on Oct 11.</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 01</span><span class="activity-desc">Meeting with PE Jakarta, Drilling Safety &amp; Unisat — HPU power pack 5 m from cellar box (API).</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 03–08</span><span class="activity-desc">HPU re-check &amp; warm up. Reposition power pack 5 m. Test HPU — OK.</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 09–11</span><span class="activity-desc">Re-assessment: spark &amp; lightning arrestor pending, minor items executed by Unisat.</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 12</span><span class="activity-desc">Grounding test &lt;5 Ohm. Commissioning 3 SPM &amp; 110 SL, 100% WC.</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 13–30</span><span class="activity-desc">Unload completion fluid 100% WC. Est. 20 days (60 BFPD eff 70%).</span></div>
+                    <div class="activity-item"><span class="activity-date">Oct 31–Nov 01</span><span class="activity-desc">Generator from DM Yard ready. Switch to system, casing flow to gas boot.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 02–05</span><span class="activity-desc">Monitor: <span class="highlight">Cl 2,500 ppm, WC 100%, pH 7.</span></span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 06–07</span><span class="activity-desc">Test tank moved to site. Plan test.</span></div>
                 </div>
-                <div class="plan-section"><strong>📌 Plan:</strong><ul><li>Re-assessment prior commissioning (Oct 11)</li></ul></div>
+                <div class="plan-section"><strong>📌 Plan:</strong>
+                    <ul>
+                        <li>Conduct test</li>
+                        <li>Install sample point at casing line</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <!-- ===== OTHER ACTIVITIES ===== -->
-        <div class="well-card" data-name="Other Activities" data-status="Monitoring">
+        <!-- GE-69 -->
+        <div class="well-card" data-name="GE-69" data-status="Monitoring">
             <div class="well-header" onclick="toggleWell(this)">
-                <h2>📋 Other Activities &amp; Monitoring</h2>
+                <h2>🛢️ GE-69 <small style="font-size:13px;font-weight:400;opacity:.8;">(Divert Line BGP → GE GRF)</small></h2>
                 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
                     <div class="badge-group">
                         <span class="badge status-monitoring">● Monitoring</span>
@@ -797,32 +378,42 @@
                 </div>
             </div>
             <div class="well-body">
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">Capillary String</span><span class="activity-desc">NG-33, LIU maintenance. Next: MK-5, NG-23.</span></div>
-                    <div class="activity-item"><span class="activity-date">Bangko Wells</span><span class="activity-desc">WP-1, WP-3R, WP-4, WP-6, WP-7 (shut-in).</span></div>
+                <div class="objective"><strong>Objective:</strong> Divert GE-69 (intermittent to BGP) → GE GRF, flow ~0.8 MMCFD. Jumper via ex GE-28 slot manifold.</div>
+                <div class="well-meta">
+                    <span>📅 Nov 06 – Nov 07</span>
+                    <span>📍 Flowline Modification</span>
                 </div>
-                <div class="plan-section">
-                    <strong>📌 Plan Activities:</strong>
+                <div class="activity-timeline">
+                    <div class="activity-item"><span class="activity-date">Nov 06</span><span class="activity-desc">tMOC created. HAZOP with related sections. Coordination collect material.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Continue collect materials.</span></div>
+                </div>
+                <div class="plan-section"><strong>📌 Plan:</strong>
                     <ul>
-                        <li><span class="highlight">Sabar-D1, GE-63, GE-67, SB-1, NEB-34</span> — Pressure survey</li>
-                        <li>Continue monitor well performance</li>
+                        <li>Collect material</li>
+                        <li>Execute modification (jumper GE-69 via ex GE-28)</li>
                     </ul>
-                    <br>
-                    <strong>📌 Well Program Postponed:</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Monitoring -->
+        <div class="well-card" data-name="Daily Monitoring" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>📈 Update Daily Report Monitoring</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="plan-section">
                     <ul>
-                        <li>WB-D7 — Postpone pressure survey</li>
-                        <li>NG-28 — POOH GLPO, postponed due to valve leaking</li>
-                        <li>GE-73 — Pressure survey after Acidizing</li>
-                        <li>GE-10 — Terminated (hard to retrieve PX prong, overshot left in hole)</li>
-                        <li>Sabar-2 — Terminated due to swab valve malfunction</li>
-                        <li>GE-70 — Terminated due to tight scale, need CTU</li>
-                        <li>GE-3 — Close SSD upper zone unsuccessful</li>
-                        <li>WB-D2 — Terminated due to scale issue</li>
-                        <li>NEB-92 — Change zone, CTU job first</li>
-                        <li>SBD-22 — MRT &amp; PBU other zone</li>
-                        <li>SBD-15 — Gas lift optimization</li>
-                        <li>NEB-64 — MRT &amp; PBU upper zone</li>
-                        <li>NEB-58 — Change zone, required CTU</li>
+                        <li>Continue monitor well performance</li>
+                        <li>WB-D6 CTU kickoff N2</li>
+                        <li>NEB-61 tubing clearance</li>
+                        <li>NEB-124 MRT &amp; PBU lower zone WG</li>
                     </ul>
                 </div>
             </div>
@@ -835,13 +426,12 @@
 
         <hr>
         <div class="footer">
-            📄 Daily Activity Report · Field Production Engineering · Updated October 10, 2026
+            📄 Daily Activity Report · Field Production Engineering · Updated November 07, 2026
         </div>
 
     </div>
 
     <script>
-        // ===== TOGGLE WELL (Show/Hide) =====
         function toggleWell(header) {
             const body = header.nextElementSibling;
             const icon = header.querySelector('.toggle-icon');
@@ -854,7 +444,6 @@
             }
         }
 
-        // ===== FILTER =====
         let currentFilter = 'all';
 
         function setFilter(status) {
@@ -882,9 +471,7 @@
             cards.forEach(card => {
                 const name = (card.dataset.name || '').toLowerCase();
                 const status = card.dataset.status || '';
-
                 const matchesSearch = name.includes(query);
-
                 let matchesFilter = false;
                 if (currentFilter === 'all') {
                     matchesFilter = true;
@@ -892,7 +479,6 @@
                     const statuses = status.split(' ');
                     matchesFilter = statuses.some(s => s === currentFilter);
                 }
-
                 if (matchesSearch && matchesFilter) {
                     card.classList.remove('hidden');
                     visibleCount++;
@@ -902,16 +488,11 @@
             });
 
             document.getElementById('visibleCount').textContent = visibleCount;
-
             const noResult = document.getElementById('noResult');
-            if (visibleCount === 0) {
-                noResult.classList.add('show');
-            } else {
-                noResult.classList.remove('show');
-            }
+            if (visibleCount === 0) { noResult.classList.add('show'); }
+            else { noResult.classList.remove('show'); }
         }
 
-        // ===== KEYBOARD SHORTCUT: ESC to reset =====
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 resetFilters();
@@ -919,7 +500,6 @@
             }
         });
 
-        // ===== INIT =====
         document.addEventListener('DOMContentLoaded', function() {
             applyFilters();
         });
