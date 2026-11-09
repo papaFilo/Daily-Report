@@ -159,6 +159,26 @@
         .well-image .caption {
             font-size: 13px; color: #4b6a7a; margin-top: 6px;
         }
+        /* ===== WELL TEST MONITORING — FULL WIDTH IMAGE ===== */
+        .gallery-card .well-header { background: #0f5e3d; }
+        .gallery-card .well-header:hover { background: #0c4a30; }
+        .welltest-full {
+            background: #f8fafc; border: 1px solid #e2e9f0;
+            border-radius: 8px; padding: 14px; text-align: center;
+        }
+        .welltest-full img {
+            width: 100%; height: auto; display: block;
+            border-radius: 6px; border: 1px solid #d0dce6;
+            background: #ffffff;
+        }
+        .welltest-full .gallery-caption {
+            font-size: 14px; color: #4b6a7a; font-weight: 600; margin-top: 10px;
+        }
+        .welltest-full .gallery-placeholder {
+            font-size: 14px; color: #9aaebd; font-style: italic;
+            padding: 80px 20px; background: #ffffff; border-radius: 6px;
+            border: 1px dashed #b0c4d4;
+        }
         .no-result {
             text-align: center; padding: 40px 20px; color: #4b6a7a;
             font-size: 16px; background: #ffffff; border-radius: 10px;
@@ -189,17 +209,18 @@
         <h1>
             📋 Daily Activity Report
             <small>Field Production Engineering · November 2026</small>
-            <span class="update-date">🔄 Updated: November 08, 2026</span>
+            <span class="update-date">🔄 Updated: November 09, 2026</span>
         </h1>
 
         <div class="summary-box">
-            <strong>📌 Summary — November 08, 2026:</strong>
+            <strong>📌 Summary — November 09, 2026:</strong>
             <ul>
-                <li><strong>NEB-124</strong> — Re-unload & MRT choke 24/64" & 28/64" done; in progress 32/64". Plan PBU 24 hrs.</li>
-                <li><strong>NEB-61 (new)</strong> — Slickline moved from WB-6; tubing clearance prior thru tubing perforation.</li>
-                <li><strong>WB-D6</strong> — Slickline rig down; BOL to WB PPF V-200 (WHP/FLP 140/130 psig). Waiting CTU.</li>
-                <li><strong>Panen-D14 HPU</strong> — Test done: <strong>1,730 BFPD, 10 BOPD, WC 100%, Cl 1,500 ppm.</strong></li>
-                <li><strong>GE-69</strong> — Material shortage identified; looking at BGP shop.</li>
+                <li><strong>NEB-124</strong> — MRT 32/64" in progress; plan PBU 24 hrs & PBU middle zone.</li>
+                <li><strong>NEB-61</strong> — Tubing clearance (unit on site).</li>
+                <li><strong>WB-D6</strong> — BOL to WB PPF V-200 (WHP/FLP 140/130 psig). Waiting CTU.</li>
+                <li><strong>SB-D17</strong> — Switch to system (WHP/FLP 170/160 psig). Plan test.</li>
+                <li><strong>Panen-D14 HPU</strong> — Sampling point installed at casing annulus; plan sample & sonolog.</li>
+                <li><strong>GE-69</strong> — Coordinate with Fabshop re: shortage material & purchase option.</li>
             </ul>
         </div>
 
@@ -245,17 +266,18 @@
                     </ul>
                 </div>
                 <div class="well-meta">
-                    <span>📅 Nov 05 – Nov 08</span>
+                    <span>📅 Nov 05 – Nov 09</span>
                     <span>📍 MRT &amp; PBU — Lower Zone WG</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Nov 05–06</span><span class="activity-desc">PCE test 3000 psig + SIMOP. Hydrotest &amp; flushing flowline, choke/SDV/instrument/scaffolding installed. <span class="highlight">BPV pulled — SITP 600 psig.</span></span></div>
                     <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Tubing clearance done. <span class="highlight">Prong pulled — SITP 600→740 psig.</span> Body plug POOH. Unload to flare pit; <span class="highlight">switch to system 24/64" (WHP/FLP 780/430 psig).</span> Line up test V-140 — Gas 3,970 MCFD.</span></div>
-                    <div class="activity-item"><span class="activity-date">Nov 08</span><span class="activity-desc">Flow to system 24/64" (WHP/FLP 560/400 psig). Re-unload to flare pit. Line up test; RIH dummy &amp; EMR to bottom. <span class="highlight">MRT 24/64": Gas 4,120 MCFD; MRT 24/64": Gas 3,190 MCFD; MRT 28/64": Gas 2,260 MCFD</span> — no liquid from wellhead &amp; separator. In progress MRT 32/64".</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 08</span><span class="activity-desc">Re-unload to flare pit. MRT: <span class="highlight">24/64" Gas 4,120 MCFD; 24/64" Gas 3,190 MCFD; 28/64" Gas 2,260 MCFD</span> — no liquid from wellhead &amp; separator. In progress MRT 32/64".</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 09</span><span class="activity-desc">Continue MRT 32/64" (in progress). Plan shut in well for PBU 24 hrs. Est. POOH EMR Nov 10 10.30.</span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/NEB-124.png" alt="NEB-124 Test">
-                    <div class="caption">📊 Hasil testing NEB-124 — Lower Zone WG (Nov 08, 2026)</div>
+                    <div class="caption">📊 Hasil testing NEB-124 — Lower Zone WG (Nov 09, 2026)</div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong>
                     <ul>
@@ -266,7 +288,7 @@
             </div>
         </div>
 
-        <!-- NEB-61 (NEW) -->
+        <!-- NEB-61 -->
         <div class="well-card" data-name="NEB-61" data-status="Slickline-ongoing">
             <div class="well-header" onclick="toggleWell(this)">
                 <h2>🛢️ NEB-61 <small style="font-size:13px;font-weight:400;opacity:.8;">(Tubing Clearance)</small></h2>
@@ -280,11 +302,12 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Tubing clearance prior thru tubing perforation.</div>
                 <div class="well-meta">
-                    <span>📅 Nov 08</span>
+                    <span>📅 Nov 08 – Nov 09</span>
                     <span>📍 Tubing Clearance</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Nov 08</span><span class="activity-desc">Slickline unit moved from WB-6 to NEB-61, set up at location.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 09</span><span class="activity-desc">Unit on site; preparation tubing clearance (no update detail).</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong>
                     <ul>
@@ -376,7 +399,7 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> HPU commissioning after well service.</div>
                 <div class="well-meta">
-                    <span>📅 Oct 01 – Nov 08</span>
+                    <span>📅 Oct 01 – Nov 09</span>
                     <span>📍 HPU Commissioning &amp; Test</span>
                 </div>
                 <div class="activity-timeline">
@@ -384,6 +407,7 @@
                     <div class="activity-item"><span class="activity-date">Oct 12–30</span><span class="activity-desc">Grounding test &lt;5 Ohm. Commissioning 3 SPM &amp; 110 SL, 100% WC. Unload completion fluid 100% WC (est. 20 days).</span></div>
                     <div class="activity-item"><span class="activity-date">Oct 31–Nov 05</span><span class="activity-desc">Generator from DM Yard ready. Switch to system, casing flow to gas boot. Monitor: <span class="highlight">Cl 2,500 ppm, WC 100%, pH 7.</span></span></div>
                     <div class="activity-item"><span class="activity-date">Nov 06–08</span><span class="activity-desc">Test tank moved to site. <span class="highlight">Test Nov 08: 3 SPM/110 SL — liquid 1,730 BFPD, oil 10 BOPD, WC 100% (Cl 1,500 ppm)</span> from tubing &amp; casing.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 09</span><span class="activity-desc">Installed sampling point at casing annulus. Plan take sample from annulus &amp; conduct sonolog.</span></div>
                 </div>
                 <div class="well-image">
                     <img src="image/Panen-D14.png" alt="Panen-D14 Test">
@@ -391,7 +415,8 @@
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong>
                     <ul>
-                        <li>Continue monitor well performance</li>
+                        <li>Take sample from annulus</li>
+                        <li>Conduct sonolog</li>
                     </ul>
                 </div>
             </div>
@@ -411,59 +436,20 @@
             <div class="well-body">
                 <div class="objective"><strong>Objective:</strong> Divert GE-69 (intermittent to BGP) → GE GRF, flow ~0.8 MMCFD. Jumper via ex GE-28 slot manifold.</div>
                 <div class="well-meta">
-                    <span>📅 Nov 06 – Nov 08</span>
+                    <span>📅 Nov 06 – Nov 09</span>
                     <span>📍 Flowline Modification</span>
                 </div>
                 <div class="activity-timeline">
                     <div class="activity-item"><span class="activity-date">Nov 06</span><span class="activity-desc">tMOC created. HAZOP with related sections. Coordination collect material.</span></div>
-                    <div class="activity-item"><span class="activity-date">Nov 07</span><span class="activity-desc">Continue collect materials.</span></div>
-                    <div class="activity-item"><span class="activity-date">Nov 08</span><span class="activity-desc">Material shortage: <span class="highlight">1 jt 3" pipe Sch 80 (CS), 1 ea Reducer 4×3" Sch 80, 1 ea elbow 3", 1 ea tee equal 4"×4" SS, 1 ea insulation gasket 4" 900.</span> In progress look for material at BGP shop.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 07–08</span><span class="activity-desc">Material shortage: <span class="highlight">1 jt 3" pipe Sch 80 (CS), 1 ea Reducer 4×3" Sch 80, 1 ea elbow 3", 1 ea tee equal 4"×4" SS, 1 ea insulation gasket 4" 900.</span> Look for material at BGP shop.</span></div>
+                    <div class="activity-item"><span class="activity-date">Nov 09</span><span class="activity-desc">Plan coordinate with Fabshop team re: shortage material &amp; purchase option if unavailable.</span></div>
                 </div>
                 <div class="plan-section"><strong>📌 Plan:</strong>
                     <ul>
-                        <li>Look for material at BGP shop</li>
+                        <li>Coordinate with Fabshop team</li>
+                        <li>Purchase option if material unavailable</li>
                         <li>Execute modification (jumper GE-69 via ex GE-28)</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Monitoring Casing Pressure -->
-        <div class="well-card" data-name="Monitoring Casing Pressure" data-status="Monitoring">
-            <div class="well-header" onclick="toggleWell(this)">
-                <h2>📊 Monitoring Casing Pressure</h2>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-                    <div class="badge-group">
-                        <span class="badge status-monitoring">● Monitoring</span>
-                    </div>
-                    <span class="toggle-icon">▼</span>
-                </div>
-            </div>
-            <div class="well-body">
-                <div class="well-meta">
-                    <span>📅 Nov 08</span>
-                    <span>📍 Casing Pressure Check</span>
-                </div>
-                <div class="activity-timeline">
-                    <div class="activity-item"><span class="activity-date">GE-81</span><span class="activity-desc">Re-check (16-Oct) — CP 1,360 → 0 psig. After well shut in.</span></div>
-                    <div class="activity-item"><span class="activity-date">NEB-72</span><span class="activity-desc">Check &amp; release (17-Oct) — CP 800 → 0 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">NEB-111</span><span class="activity-desc">Check &amp; release (17-Oct) — CP 1,600 → 0 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-47</span><span class="activity-desc">Check &amp; release (17-Oct) — 480 → 50 psig; (19-Oct) 290 → 160 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-57</span><span class="activity-desc">Check &amp; release (17-Oct) — 40 → 20 psig; (18-Oct) 20 → 0 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">Marmo-2</span><span class="activity-desc">Check &amp; release (17-Oct) — 40 → 30 psig (1 hr, reduce 100 psig); (20-Oct) 300 → 160 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">Marmo-3</span><span class="activity-desc">Check &amp; release (19-Oct) — 430 → 430 psig. Release CHP to flare pit 08.30–16.00, no reduction.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-44</span><span class="activity-desc">Check &amp; release (17-Oct) — 1,150 → 800 psig (1.5 hr, reduce 350 psig); (19-Oct) 1,150 → 1,150 psig (1 hr, no reduction).</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-63</span><span class="activity-desc">Check &amp; release (22-Oct) — 1,600 → 1,420 psig. Released 1 hour.</span></div>
-                    <div class="activity-item"><span class="activity-date">Ripah-19</span><span class="activity-desc">Check &amp; release (22-Oct) — 740 → 640 psig. Released 1 hour.</span></div>
-                    <div class="activity-item"><span class="activity-date">Ripah-21</span><span class="activity-desc">Check (22-Oct) — 0 psig. No release activity.</span></div>
-                    <div class="activity-item"><span class="activity-date">NEB-31</span><span class="activity-desc">Check &amp; release (23-Oct) — 1,500 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">NEB-80</span><span class="activity-desc">Check &amp; release (23-Oct) — 2,500 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">NEB-96</span><span class="activity-desc">Check &amp; release (23-Oct) — 4,000 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-68</span><span class="activity-desc">Check (08-Nov) — 0 psig. No release activity.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-19</span><span class="activity-desc">Check &amp; release (08-Nov) — 300 → 270 psig. Tubing stable at 340 psig.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-79</span><span class="activity-desc">Check (08-Nov) — 0 psig. No release activity.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-69</span><span class="activity-desc">Check (08-Nov) — 0 psig. No release activity.</span></div>
-                    <div class="activity-item"><span class="activity-date">GE-45</span><span class="activity-desc">Check (08-Nov) — <span class="highlight">Handwheel casing valve broken.</span></span></div>
                 </div>
             </div>
         </div>
@@ -517,6 +503,29 @@
             </div>
         </div>
 
+        <!-- ===== WELL TEST MONITORING — FULL WIDTH IMAGE ===== -->
+        <div class="well-card gallery-card" data-name="Well Test Monitoring" data-status="Monitoring">
+            <div class="well-header" onclick="toggleWell(this)">
+                <h2>🖼️ Well Test Monitoring</h2>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <div class="badge-group">
+                        <span class="badge status-monitoring">● Monitoring</span>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+            </div>
+            <div class="well-body">
+                <div class="welltest-full">
+                    <img src="image/Welltest.png" alt="Well Test Monitoring"
+                         onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div class="gallery-placeholder" style="display:none;">
+                        📷 Gambar belum tersedia<br><code>image/Welltest.png</code>
+                    </div>
+                    <div class="gallery-caption">📊 Well Test Monitoring — November 2026</div>
+                </div>
+            </div>
+        </div>
+
         <!-- ===== NO RESULT ===== -->
         <div class="no-result" id="noResult">
             😕 Tidak ada well yang sesuai dengan pencarian atau filter.
@@ -524,7 +533,7 @@
 
         <hr>
         <div class="footer">
-            📄 Daily Activity Report · Field Production Engineering · Updated November 08, 2026
+            📄 Daily Activity Report · Field Production Engineering · Updated November 09, 2026
         </div>
 
     </div>
